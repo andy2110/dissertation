@@ -1,11 +1,11 @@
 import Navbar from './components/layout/Navbar'
-import Footer from './components/Footer'
-import Home from './components/Home'
-import About from './components/About'
-import Team from './components/Team'
-import Vacancies from './components/Vacancies'
-import Contact from './components/Contact'
-import PageNotFound from "./components/PageNotFound";
+import Footer from './components/layout/Footer'
+import Home from './components/pages/Home'
+import About from './components/pages/About'
+import Team from './components/pages/Team'
+import Vacancies from './components/pages/Vacancies'
+import Contact from './components/pages/Contact'
+import PageNotFound from "./components/pages/PageNotFound";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import "./App.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
