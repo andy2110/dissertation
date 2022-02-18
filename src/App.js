@@ -51,68 +51,8 @@ function App() {
           test
           <br/>
           test
-          <br/>
-          test
-          <br/>
-          test
-          <br/>
-          test
-          <br/>
-          test
-          <br/>
-          test
-          <br/>
-          test
-          <br/>
-          test
-          <br/>
-          test
-          <br/>
-          test
-          <br/>
-          test
-          <br/>
-          test
-          <br/>
-          test
-          <br/>
-          test
-          <br/>
-          test
-          <br/>
-          test
-          <br/>
-          test
-          <br/>
-          test
-          <br/>
-          test
-          <br/>
-          test
-          <br/>
-          test
-          <br/>
-          test
-          <br/>
-          test
-          <br/>
-          test
-          <br/>
-          test
-          <br/>
-          test
-          <br/>
-          test
-          <br/>
-          <br/>
-          test
-          <br/>
-          <br/>
-          test
-          <br/>
-          <br/>
-          test
-          <br/>
+
+
           <Footer/>
       </div>
   );
