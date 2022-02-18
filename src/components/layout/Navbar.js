@@ -7,7 +7,7 @@ const Navigation = () => {
                 <Col>
                 <Row className={"col-lg-10 col-xs-1"}>
                     <img
-                        src={require('../tss-logo.png')}
+                        src={require('../../tss-logo.png')}
                         width="920"
                         height="160"
                         className="d-inline-block align-top"

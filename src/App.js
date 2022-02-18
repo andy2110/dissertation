@@ -1,4 +1,4 @@
-import Navbar from './components/Navbar'
+import Navbar from './components/layout/Navbar'
 import Footer from './components/Footer'
 import Home from './components/Home'
 import About from './components/About'
@@ -12,7 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-      <>
+      <div id="page-container">
           <Navbar/>
           <Router>
               <Routes>
@@ -27,9 +27,94 @@ function App() {
           <br/>
           test
           <br/>
-
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          test
+          <br/>
+          <br/>
+          test
+          <br/>
+          <br/>
+          test
+          <br/>
+          <br/>
+          test
+          <br/>
           <Footer/>
-      </>
+      </div>
   );
 }
 
