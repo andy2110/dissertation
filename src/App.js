@@ -24,35 +24,6 @@ function App() {
                   <Route path='/contact' component={<Contact/>}/>
               </Routes>
           </Router>
-          <br/>
-          test
-          <br/>
-          <br/>
-          test
-          <br/>
-          test
-          <br/>
-          test
-          <br/>
-          test
-          <br/>
-          test
-          <br/>
-          test
-          <br/>
-          test
-          <br/>
-          test
-          <br/>
-          test
-          <br/>
-          test
-          <br/>
-          test
-          <br/>
-          test
-
-
           <Footer/>
       </div>
   );

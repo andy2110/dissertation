@@ -8,15 +8,15 @@ const Footer = () => {
                 <div className="container">
                     <div className="row">
                         {/*Column 1*/}
-                        {/*<div className="col-md-3 col-sm-6">*/}
-                        {/*    <h4>Lorem ipsum</h4>*/}
-                        {/*    <ul className="list-unstyled">*/}
-                        {/*        <li>Lorem</li>*/}
-                        {/*        <li>Lorem</li>*/}
-                        {/*        <li>Lorem</li>*/}
-                        {/*        <li>Lorem</li>*/}
-                        {/*    </ul>*/}
-                        {/*</div>*/}
+                        <div className="col-md-3 col-sm-6">
+                            <h4>Lorem ipsum</h4>
+                            <ul className="list-unstyled">
+                                <li>Lorem</li>
+                                <li>Lorem</li>
+                                <li>Lorem</li>
+                                <li>Lorem</li>
+                            </ul>
+                        </div>
                         {/*Column 2*/}
                         <div className="col-md-3 col-sm-6">
                             <h4>Lorem ipsum</h4>
