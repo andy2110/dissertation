@@ -1,4 +1,6 @@
 import {Container, Navbar, Nav, NavDropdown, Row, Col} from "react-bootstrap";
+import { Link } from 'react-router-dom';
+import { LinkContainer } from 'react-router-bootstrap';
 
 const Navigation = () => {
     return (
@@ -6,20 +8,20 @@ const Navigation = () => {
             <Navbar bg="light" expand="lg">
                 <Container>
                     <img
-                        src={require('../../tss-logo.png')}
+                        src={require('../images/tss-logo.png')}
                         width="920"
                         height="160"
                         className="d-inline-block align-top"
                         alt="Drawing of an employee holding hands with a child next to the words Time Specialist Support"
                     />
                 </Container>
-            </Navbar>
-            <Navbar bg="light" expand="lg" sticky="top">
 
+            </Navbar>
+
+            <Navbar bg="light" expand="lg" sticky="top">
                 <Container>
                     <Col>
                     <Row className={"col-lg-10 col-xs-1"}>
-
                     </Row>
                     <Row>
                         <Navbar.Brand href="/">
@@ -28,11 +30,21 @@ const Navigation = () => {
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="me-auto">
-                                <Nav.Link href="/">Home</Nav.Link>
-                                <Nav.Link href="/about">About Us</Nav.Link>
-                                <Nav.Link href="/team">Meet the Team</Nav.Link>
-                                <Nav.Link href="/vacancies">Vacancies</Nav.Link>
-                                <Nav.Link href="/contact">Contact Us</Nav.Link>
+                                <LinkContainer to="/home">
+                                    <Nav.Link>Home</Nav.Link>
+                                </LinkContainer>
+                                <LinkContainer to="/about">
+                                    <Nav.Link>About us</Nav.Link>
+                                </LinkContainer>
+                                <LinkContainer to="/team">
+                                    <Nav.Link>Meet the Team</Nav.Link>
+                                </LinkContainer>
+                                <LinkContainer to="/vacancy">
+                                    <Nav.Link>Vacancies</Nav.Link>
+                                </LinkContainer>
+                                <LinkContainer to="/contact">
+                                    <Nav.Link>Contact Us</Nav.Link>
+                                </LinkContainer>
                                 <NavDropdown title="Further Links" id="basic-nav-dropdown">
                                     <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
@@ -46,6 +58,7 @@ const Navigation = () => {
                     </Col>
                 </Container>
             </Navbar>
+            <br/>
         </>
     )
 }
