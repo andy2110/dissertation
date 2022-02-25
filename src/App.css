@@ -6,6 +6,15 @@
   --mainBlue: #007bff;
 }
 
+#body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 153vh;
+}
+
 #page-container {
   position: relative;
   min-height: 150vh;
