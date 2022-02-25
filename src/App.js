@@ -13,16 +13,19 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
       <div id="page-container">
-          <Navbar/>
           <Router>
+              <Navbar/>
+              <div id="body">
               <Routes>
                   <Route path='*' element={<PageNotFound/>}/>
                   <Route path='/' exact element={<Home/>}/>
-                  <Route path='/about' component={<About/>}/>
-                  <Route path='/team' component={<Team/>}/>
-                  <Route path='/vacancies' component={<Vacancies/>}/>
-                  <Route path='/contact' component={<Contact/>}/>
+                  <Route path='/home' element={<Home/>}/>
+                  <Route path='/about' element={<About/>}/>
+                  <Route path='/team' element={<Team/>}/>
+                  <Route path='/vacancy' element={<Vacancies/>}/>
+                  <Route path='/contact' element={<Contact/>}/>
               </Routes>
+              </div>
           </Router>
           <Footer/>
       </div>
