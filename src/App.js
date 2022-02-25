@@ -6,6 +6,7 @@ import Team from './components/pages/Team'
 import Vacancies from './components/pages/Vacancies'
 import Contact from './components/pages/Contact'
 import PageNotFound from "./components/pages/PageNotFound";
+import Staff from "./components/pages/Staff"
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import "./App.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -24,6 +25,7 @@ function App() {
                   <Route path='/team' element={<Team/>}/>
                   <Route path='/vacancy' element={<Vacancies/>}/>
                   <Route path='/contact' element={<Contact/>}/>
+                  <Route path='/staff' element={<Staff/>}/>
               </Routes>
               </div>
           </Router>

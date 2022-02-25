@@ -29,7 +29,7 @@ const Home = () => {
                 <Col md={4}>
                     <Card className="mb-3" style={{ width: '24rem' }}>
                         <Image
-                            src={contactPhoto}
+                            src={whatWeDoPhoto}
                             className="card-img-top"
                             alt={"child and male support worker"}
                             fluid
@@ -46,7 +46,7 @@ const Home = () => {
                 <Col md={4}>
                     <Card className="mb-3" style={{ width: '24rem' }}>
                         <Image
-                            src={whatWeDoPhoto}
+                            src={contactPhoto}
                             className="card-img-top"
                             alt={"child and male support worker"}
                             fluid
