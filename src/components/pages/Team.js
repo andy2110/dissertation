@@ -18,7 +18,6 @@ const Team = () => {
 
             <Row>
                 <Col lg={4} md={6}>
-                    {/*className="mb-3" style={{ width: '18rem' }}*/}
                     <Card className="mb-3">
                         <Image
                             src={toriPhoto}
