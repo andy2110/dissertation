@@ -1,5 +1,4 @@
 import {Container, Navbar, Nav, NavDropdown, Row, Col} from "react-bootstrap";
-import { Link } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
 
 const Navigation = () => {
@@ -7,6 +6,7 @@ const Navigation = () => {
         <>
             <Navbar bg="light" expand="lg">
                 <Container>
+                    <Row className={"col-lg-10 col-xs-1"}>
                     <img
                         src={require('../images/tss-logo.png')}
                         width="920"
@@ -14,6 +14,7 @@ const Navigation = () => {
                         className="d-inline-block align-top"
                         alt="Drawing of an employee holding hands with a child next to the words Time Specialist Support"
                     />
+                    </Row>
                 </Container>
 
             </Navbar>
@@ -21,8 +22,7 @@ const Navigation = () => {
             <Navbar bg="light" expand="lg" sticky="top">
                 <Container>
                     <Col>
-                    <Row className={"col-lg-10 col-xs-1"}>
-                    </Row>
+
                     <Row>
                         <Navbar.Brand href="/">
                             Time Specialist Support

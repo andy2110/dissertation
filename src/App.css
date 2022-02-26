@@ -1,3 +1,8 @@
+html {
+  height: 100%;
+}
+
+
 :root {
   --mainDark: #2b2c2c;
   --mainGrey: rgba(109, 109, 109);
@@ -7,17 +12,17 @@
 }
 
 #body {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 153vh;
+  /*margin: 0;*/
+  /*padding: 0;*/
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*justify-content: space-between;*/
+  /*min-height: 153vh;*/
 }
 
 #page-container {
-  position: relative;
-  min-height: 150vh;
+  /*position: relative;*/
+  /*min-height: 100%;*/
 }
 
 #content-wrap {
@@ -25,11 +30,11 @@
 }
 
 #footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: var(--mainDark);
-  padding-top: 3rem;
-  color: var(--mainWhite);
+  /*position: fixed;*/
+  /*bottom: 0;*/
+  /*width: 100%;*/
+  /*background: var(--mainDark);*/
+  /*padding-top: 3rem;*/
+  /*color: var(--mainWhite);*/
   /*height: 2.5rem;            !* Footer height *!*/
 }

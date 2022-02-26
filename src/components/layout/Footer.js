@@ -1,14 +1,15 @@
 import React from "react";
 import styled from 'styled-components'
+import { Row, Col } from "react-bootstrap";
 
 const Footer = () => {
     return (
         <FooterContainer className="footer">
             <div className="footer-middle">
                 <div className="container">
-                    <div className="row">
+                    <Row>
                         {/*Column 1*/}
-                        <div className="col-md-3 col-sm-6">
+                        <Col md={3} sm={6}>
                             <h4>Lorem ipsum</h4>
                             <ul className="list-unstyled">
                                 <li>Lorem</li>
@@ -16,29 +17,28 @@ const Footer = () => {
                                 <li>Lorem</li>
                                 <li>Lorem</li>
                             </ul>
-                        </div>
+                        </Col>
                         {/*Column 2*/}
-                        <div className="col-md-3 col-sm-6">
+                        <Col md={3} sm={6}>
                             <h4>Lorem ipsum</h4>
                             <ul className="list-unstyled">
-                                <li><a href='/'>Lorem</a></li>
-                                <li><a href='/'>Lorem</a></li>
-                                <li><a href='/'>Lorem</a></li>
-                                <li><a href='/'>Lorem</a></li>
+                                <li><a href={'/'}>Lorem</a></li>
+                                <li><a href={'/'}>Lorem</a></li>
+                                <li><a href={'/'}>Lorem</a></li>
+                                <li><a href={'/'}>Lorem</a></li>
                             </ul>
-                        </div>
-                        {/*Column 3*/}
-                        <div className="col-md-3 col-sm-6">
+                        </Col>
+                        {/*Column 2*/}
+                        <Col md={3} sm={6}>
                             <h4>Lorem ipsum</h4>
                             <ul className="list-unstyled">
-                                <li><a href='/'>Lorem</a></li>
-                                <li><a href='/'>Lorem</a></li>
-                                <li><a href='/'>Lorem</a></li>
-                                <li><a href='/'>Lorem</a></li>
+                                <li><a href={'/'}>Lorem</a></li>
+                                <li><a href={'/'}>Lorem</a></li>
+                                <li><a href={'/'}>Lorem</a></li>
+                                <li><a href={'/'}>Lorem</a></li>
                             </ul>
-                        </div>
-                    </div>
-                {/* Footer Bottom */}
+                        </Col>
+                    </Row>
                     <div className="footer-bottom">
                         <p className="text-xd-center">
                             &copy;{new Date().getFullYear()} Time Specialist Support - All Rights Reserved
@@ -58,10 +58,8 @@ const FooterContainer = styled.footer`
       padding-top: 3rem;
       color: var(--mainWhite);
       position: absolute;
-      bottom: 0;
+      //bottom: 0;
       width: 100%;
-      //height: 40rem;
-      
     }
 
   .footer-bottom {

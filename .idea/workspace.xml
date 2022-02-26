@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="454e0e34-28c2-4b1e-9bde-816a21a538d6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/images/about-page-example-photo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/Staff.js" afterDir="false" />
+    <list default="true" id="454e0e34-28c2-4b1e-9bde-816a21a538d6" name="Changes" comment="potential fix to footer overlap">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Navbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/About.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Team.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Team.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +64,9 @@
       <workItem from="1645204997128" duration="1903000" />
       <workItem from="1645562354722" duration="640000" />
       <workItem from="1645789140916" duration="8117000" />
-      <workItem from="1645831298816" duration="1742000" />
+      <workItem from="1645831298816" duration="1886000" />
+      <workItem from="1645893838847" duration="5989000" />
+      <workItem from="1645906831666" duration="1179000" />
     </task>
     <task id="LOCAL-00001" summary="testing commit + added pages directory">
       <created>1645205223205</created>
@@ -80,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645208741054</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="reformatted about page + added content, created staff page for routing">
+      <created>1645833433526</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1645833433526</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,6 +111,9 @@
     <MESSAGE value="testing commit + added pages directory" />
     <MESSAGE value="added sticky navbar, changed tab title + icon" />
     <MESSAGE value="added images + content cards to home page" />
-    <option name="LAST_COMMIT_MESSAGE" value="added images + content cards to home page" />
+    <MESSAGE value="reformatted about page + added content, created staff page for routing" />
+    <MESSAGE value="added content to about, formatted meet the team page" />
+    <MESSAGE value="potential fix to footer overlap" />
+    <option name="LAST_COMMIT_MESSAGE" value="potential fix to footer overlap" />
   </component>
 </project>
