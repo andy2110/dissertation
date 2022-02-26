@@ -13,14 +13,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-      <div id="page-container">
+      <div>
           <Router>
               <Navbar/>
               <div id="body">
               <Routes>
                   <Route path='*' element={<PageNotFound/>}/>
                   <Route index element={<Home/>}/>
-                  <Route path='/home' element={<Home/>}/>
                   <Route path='/about' element={<About/>}/>
                   <Route path='/team' element={<Team/>}/>
                   <Route path='/vacancy' element={<Vacancies/>}/>
@@ -29,6 +28,7 @@ function App() {
               </Routes>
               </div>
           </Router>
+          <br/>
           <Footer/>
       </div>
   );
