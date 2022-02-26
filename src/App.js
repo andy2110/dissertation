@@ -7,7 +7,7 @@ import Vacancies from './components/pages/Vacancies'
 import Contact from './components/pages/Contact'
 import PageNotFound from "./components/pages/PageNotFound";
 import Staff from "./components/pages/Staff"
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import "./App.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -19,7 +19,7 @@ function App() {
               <div id="body">
               <Routes>
                   <Route path='*' element={<PageNotFound/>}/>
-                  <Route path='/' exact element={<Home/>}/>
+                  <Route index element={<Home/>}/>
                   <Route path='/home' element={<Home/>}/>
                   <Route path='/about' element={<About/>}/>
                   <Route path='/team' element={<Team/>}/>
