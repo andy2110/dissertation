@@ -3,14 +3,13 @@ import aboutPhoto from "../images/About-TSS-home-page-photo.jpg"
 import contactPhoto from "../images/Contact-home-page-photo.jpg"
 import whatWeDoPhoto from "../images/What-We-Do-home-page-photo.jpg"
 import meetTeam from "../images/Team-home-page-photo.jpg"
-import {Link} from "react-router-dom";
 
 const Home = () => {
     return(
         <Container>
             <Row>
-                <Col md={4}>
-                    <Card className="mb-3" style={{ width: '24rem' }}>
+                <Col lg={4} md={6}>
+                    <Card className="mb-3">
                         <Image
                             src={aboutPhoto}
                             className="card-img-top"
@@ -26,8 +25,8 @@ const Home = () => {
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col md={4}>
-                    <Card className="mb-3" style={{ width: '24rem' }}>
+                <Col lg={4} md={6}>
+                    <Card className="mb-3">
                         <Image
                             src={whatWeDoPhoto}
                             className="card-img-top"
@@ -43,8 +42,8 @@ const Home = () => {
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col md={4}>
-                    <Card className="mb-3" style={{ width: '24rem' }}>
+                <Col lg={4} md={6}>
+                    <Card className="mb-3">
                         <Image
                             src={contactPhoto}
                             className="card-img-top"
@@ -60,8 +59,8 @@ const Home = () => {
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col md={4}>
-                    <Card className="mb-3" style={{ width: '24rem' }}>
+                <Col lg={4} md={6}>
+                    <Card className="mb-3">
                         <Image
                             src={meetTeam}
                             className="card-img-top"
@@ -77,8 +76,8 @@ const Home = () => {
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col md={4}>
-                    <Card className="mb-3" style={{ width: '24rem' }}>
+                <Col lg={4} md={6}>
+                    <Card className="mb-3">
                         <Image
                             src={meetTeam}
                             className="card-img-top"
