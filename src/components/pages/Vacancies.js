@@ -1,7 +1,7 @@
 const Vacancies = () => {
     return(
         <>
-            <h1>Staff page here</h1>
+            <h1>Vacancies page here</h1>
             <br/>
             <br/>
             <br/>
