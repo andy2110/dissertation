@@ -31,9 +31,7 @@ const Navigation = () => {
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="me-auto">
                                 <LinkContainer to="/">
-                                    <LinkContainer to="/home">
                                         <Nav.Link>Home</Nav.Link>
-                                    </LinkContainer>
                                 </LinkContainer>
                                 <LinkContainer to="/about">
                                     <Nav.Link>About us</Nav.Link>
