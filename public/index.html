@@ -41,3 +41,45 @@
     -->
   </body>
 </html>
+
+<script src="https://cdn.jsdelivr.net/gh/TA3/web-user-behaviour/userBehaviour.min.js"></script>
+
+<script>
+  function start(){
+    userBehaviour.config({
+      userInfo: true,
+      clicks: true,
+      mouseMovement: true,
+      mouseMovementInterval: 1,
+      mouseScroll: true,
+      timeCount: true,
+      clearAfterProcess: false,
+      processTime: 0.1,
+      processData: function(results){
+        console.log(results);
+        localStorage.setItem("clickCount", results.clicks.clickCount);
+        localStorage.setItem("clickDetails", results.clicks.clickDetails);
+        localStorage.setItem("contextChange", results.contextChange);
+        localStorage.setItem("mouseMovements", results.mouseMovements);
+        localStorage.setItem("mouseScroll", results.mouseScroll);
+        localStorage.setItem("startTime", results.time.startTime);
+        localStorage.setItem("currentTime", results.time.currentTime);
+        localStorage.setItem("timeSpent", (results.time.currentTime - results.time.startTime).toString());
+      },
+    })
+    userBehaviour.start()
+  }
+
+  function stop(){
+    userBehaviour.stop()
+  }
+
+  function show(){
+    userBehaviour.showResult()
+  }
+</script>
+<!--userBehaviour.start();-->
+<!--userBehaviour.stop();-->
+<!--userBehaviour.showResult();-->
+
+

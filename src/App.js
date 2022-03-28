@@ -10,10 +10,23 @@ import Staff from "./components/pages/Staff"
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import "./App.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import useMouse from '@react-hook/mouse-position'
+import * as React from 'react'
 
 function App() {
+    const ref = React.useRef(null)
+    const mouse = useMouse(ref, {
+        enterDelay: 100,
+        leaveDelay: 100,
+        })
+    // console.log(mouse.x,mouse.y)
   return (
-      <div>
+      <div ref={ref}>
+          <button onClick={window['start']}>start</button>
+          <button onClick={window['stop']}>stop</button>
+          <button onClick={window['show']}>show results</button>
+
+          {/*add an event listener to the window to try listen for clicks*/}
           <Router>
               <Navbar/>
               <div id="body">

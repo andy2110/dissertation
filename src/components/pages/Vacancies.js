@@ -1,22 +1,9 @@
+import Tracker from "../../mouse";
+
 const Vacancies = () => {
     return(
-        <>
-            <h1>Vacancies page here</h1>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-        </>
+        <Tracker></Tracker>
+
     )
 }
 
