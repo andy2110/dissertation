@@ -1,4 +1,7 @@
 const Staff = () => {
+        window['clear']();
+        window['stop']();
+        window['start']();
     return(
         <>
             <h1>Staff page here</h1>

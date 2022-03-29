@@ -2,6 +2,10 @@ import {Container, Row, Col, Card, Image} from "react-bootstrap";
 import aboutExamplePhoto from "../images/about-page-example-photo.jpg"
 
 const About = () => {
+    window['clear']();
+    window['stop']();
+    window['start'](3000);
+
     return(
         <Container>
             <Row>

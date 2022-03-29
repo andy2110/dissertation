@@ -1,4 +1,7 @@
 const Contact = () => {
+        window['clear']();
+        window['stop']();
+        window['start']();
     return(
         <>
             <h1>Contact us page here</h1>

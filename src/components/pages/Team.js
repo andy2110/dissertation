@@ -6,6 +6,9 @@ import bradleyPhoto from "../images/bradley-photo-scaled-e1599227185514.jpg"
 import sophiePhoto from "../images/pic-of-Sophie-C-1.jpg"
 
 const Team = () => {
+    window['clear']();
+    window['stop']();
+    window['start'](3000);
     return(
         <Container>
             <Row>

@@ -3,8 +3,35 @@ import aboutPhoto from "../images/About-TSS-home-page-photo.jpg"
 import contactPhoto from "../images/Contact-home-page-photo.jpg"
 import whatWeDoPhoto from "../images/What-We-Do-home-page-photo.jpg"
 import meetTeam from "../images/Team-home-page-photo.jpg"
+import {useEffect} from "react";
+
+
 
 const Home = () => {
+    window['stop']();
+    window['clear']();
+    window['start']();
+
+    const READ_TIME = 3000;
+
+    setTimeout(() => {
+        if (window.session.getItem("readAccess") === "TRUE"){
+            alert("Time exceeded");
+        }
+    }, READ_TIME);
+
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         if (window.sessionStorage.getItem("timeSpent") > READ_TIME){
+    //             console.log('time gone over');
+    //             window.sessionStorage.setItem("readAccessActive", "TRUE")
+    //         }
+    //     }, MINUTE_MS);
+    //
+    //     return () => clearInterval(interval); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
+    // }, [])
+
+
     return(
         <Container>
             <Row>

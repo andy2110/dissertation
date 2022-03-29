@@ -13,12 +13,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import useMouse from '@react-hook/mouse-position'
 import * as React from 'react'
 
+export const UserContext = React.createContext();
+// https://www.freecodecamp.org/news/react-context-for-beginners/#what-is-react-context use this
+
 function App() {
     const ref = React.useRef(null)
-    const mouse = useMouse(ref, {
-        enterDelay: 100,
-        leaveDelay: 100,
-        })
+    // const mouse = useMouse(ref, {
+    //     enterDelay: 100,
+    //     leaveDelay: 100,
+    //     })
     // console.log(mouse.x,mouse.y)
   return (
       <div ref={ref}>
