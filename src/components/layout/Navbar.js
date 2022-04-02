@@ -1,7 +1,41 @@
 import {Container, Navbar, Nav, NavDropdown, Row, Col} from "react-bootstrap";
 import { LinkContainer } from 'react-router-bootstrap';
+import * as React from "react";
+import {useContext, useEffect, useState} from "react";
+import {OpacityContext, SetOpacityContext} from "../Contexts";
 
 const Navigation = () => {
+
+    const Opacity = useContext(OpacityContext)
+    const SetOpacity = useContext(SetOpacityContext)
+
+    const [ReadOpacity,SetOpacityVal] = useState()
+
+    useEffect(() => {
+
+        SetOpacityVal(Opacity)
+
+    },[Opacity])
+
+    const [colour, setColour] = useState('yellow')
+
+    const colours = ['yellow', 'red', 'blue', 'green']
+
+    const renderButtons = colours => {
+        return colours.map( (colour, index) => {
+            return ( <li key={index}
+                         className={'colour-selector ' + colour}
+                         onClick={() => setColour(colour)}>
+            </li> )
+        })
+    }
+
+    const overlayStyle = {
+        opacity: ReadOpacity,
+        backgroundColor: colour
+    }
+
+    // use state and context to monitor slider value
     return (
         <>
             <Navbar bg="light" expand="lg">
@@ -20,9 +54,11 @@ const Navigation = () => {
             </Navbar>
 
             <Navbar bg="light" expand="lg" sticky="top">
+                {/* reference opacity using the state*/}
+                <div id="overlay" style={overlayStyle}>
+                </div>
                 <Container>
                     <Col>
-
                     <Row>
                         <Navbar.Brand href="/">
                             Time Specialist Support
@@ -59,6 +95,9 @@ const Navigation = () => {
                 </Container>
             </Navbar>
             <br/>
+            <div id='toolbox'>
+                { renderButtons(colours) }
+            </div>
         </>
     )
 }

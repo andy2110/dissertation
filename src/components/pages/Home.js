@@ -3,125 +3,168 @@ import aboutPhoto from "../images/About-TSS-home-page-photo.jpg"
 import contactPhoto from "../images/Contact-home-page-photo.jpg"
 import whatWeDoPhoto from "../images/What-We-Do-home-page-photo.jpg"
 import meetTeam from "../images/Team-home-page-photo.jpg"
-import {useEffect} from "react";
+import "../../App.css"
+import React, {useCallback, useContext, useEffect, useMemo, useState} from "react";
+import {SetReadabilityContext, ReadabilityContext, SetOpacityContext} from "../Contexts";
+import RangeSlider from "../Slider";
+import {Modal} from "../Modal"
 
+const Home = (callback, deps) => {
 
+    const Readability = useContext(ReadabilityContext)
+    const SetReadability = useContext(SetReadabilityContext)
+    const SetOpacity = useContext(SetOpacityContext)
 
-const Home = () => {
-    window['stop']();
-    window['clear']();
-    window['start']();
+    const [ReadVal,SetReadVal] = useState()
+    const [showModal, setShowModal] = useState(false);
 
-    const READ_TIME = 3000;
+    const openModal = () => {
+        setShowModal(true);
+    }
 
-    setTimeout(() => {
-        if (window.session.getItem("readAccess") === "TRUE"){
-            alert("Time exceeded");
-        }
-    }, READ_TIME);
+    window['stop']()
+    window['clear']()
+    window['start']()
 
-    // useEffect(() => {
-    //     const interval = setInterval(() => {
-    //         if (window.sessionStorage.getItem("timeSpent") > READ_TIME){
-    //             console.log('time gone over');
-    //             window.sessionStorage.setItem("readAccessActive", "TRUE")
-    //         }
-    //     }, MINUTE_MS);
-    //
-    //     return () => clearInterval(interval); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
-    // }, [])
+    useEffect(() => {
 
+        SetReadVal(Readability)
 
-    return(
-        <Container>
-            <Row>
-                <Col lg={4} md={6}>
-                    <Card className="mb-3">
-                        <Image
-                            src={aboutPhoto}
-                            className="card-img-top"
-                            alt={"child and female support worker"}
-                            fluid
-                        />
-                        <Card.Body>
-                            <Card.Title>About Time Specialist Support</Card.Title>
-                            <Card.Text>
-                                What is Time Specialist Support?
-                            </Card.Text>
-                            <Button variant="primary">Go somewhere</Button>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                <Col lg={4} md={6}>
-                    <Card className="mb-3">
-                        <Image
-                            src={whatWeDoPhoto}
-                            className="card-img-top"
-                            alt={"child and male support worker"}
-                            fluid
-                        />
-                        <Card.Body>
-                            <Card.Title>What We Do</Card.Title>
-                            <Card.Text>
-                                Find out more about the services that Time Specialist support provides.
-                            </Card.Text>
-                            <Button variant="primary">Go somewhere</Button>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                <Col lg={4} md={6}>
-                    <Card className="mb-3">
-                        <Image
-                            src={contactPhoto}
-                            className="card-img-top"
-                            alt={"child and male support worker"}
-                            fluid
-                        />
-                        <Card.Body>
-                            <Card.Title>Contact Us</Card.Title>
-                            <Card.Text>
-                                How to get in touch with us.
-                            </Card.Text>
-                            <Button variant="primary">Go somewhere</Button>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                <Col lg={4} md={6}>
-                    <Card className="mb-3">
-                        <Image
-                            src={meetTeam}
-                            className="card-img-top"
-                            alt={"child and male support worker"}
-                            fluid
-                        />
-                        <Card.Body>
-                            <Card.Title>Meet The Team</Card.Title>
-                            <Card.Text>
-                                Who are we?
-                            </Card.Text>
-                            <Button variant="primary">Go somewhere</Button>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                <Col lg={4} md={6}>
-                    <Card className="mb-3">
-                        <Image
-                            src={meetTeam}
-                            className="card-img-top"
-                            alt={"child and male support worker"}
-                            fluid
-                        />
-                        <Card.Body>
-                            <Card.Title>Work For Us</Card.Title>
-                            <Card.Text>
-                                Apply for a job with Time.
-                            </Card.Text>
-                            <Button variant="primary">Go somewhere</Button>
-                        </Card.Body>
-                    </Card>
-                </Col>
-            </Row>
-        </Container>
-    )
+    },[Readability])
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (window.sessionStorage.getItem("timeSpent") > 3000){
+                console.log("READ",Readability)
+                if (Readability === "FALSE"){
+                    console.log('time gone over');
+                    SetReadability("TRUE")
+                } else{
+                    console.log("logged previously")
+                }
+            }
+        }, 3000);
+
+        return () => clearInterval(interval); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
+    }, [Readability])
+
+    // parent val for opacity slider, change variable names later!
+    const [parentVal, setParentVal] = useState(0.5);
+
+    const sliderValueChanged = useCallback((val) => {
+        SetOpacity(val)
+        console.log('NEW VALUE', val);
+        setParentVal(val);
+    });
+
+    const sliderProps = useMemo(
+        () => ({
+            min: 0,
+            max: 0.9,
+            value: parentVal,
+            step: 0.01,
+            label: 'Colour Opacity',
+            onChange: (e) => sliderValueChanged(e),
+        }),
+        [parentVal]
+    );
+
+        return (
+            <Container>
+                <div>
+                    <button onClick={openModal}>Open Modal</button>
+                    {showModal ? <Modal setShowModal={setShowModal} /> : null}
+                <RangeSlider {...sliderProps} />
+                <h1>{Readability}</h1>
+                <Row>
+                    <Col lg={4} md={6}>
+                        <Card className="mb-3">
+                            <Image
+                                src={aboutPhoto}
+                                className="card-img-top"
+                                alt={"child and female support worker"}
+                                fluid
+                            />
+                            <Card.Body>
+                                <Card.Title>About Time Specialist Support</Card.Title>
+                                <Card.Text>
+                                    What is Time Specialist Support?
+                                </Card.Text>
+                                <Button variant="primary">Go somewhere</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col lg={4} md={6}>
+                        <Card className="mb-3">
+                            <Image
+                                src={whatWeDoPhoto}
+                                className="card-img-top"
+                                alt={"child and male support worker"}
+                                fluid
+                            />
+                            <Card.Body>
+                                <Card.Title>What We Do</Card.Title>
+                                <Card.Text>
+                                    Find out more about the services that Time Specialist support provides.
+                                </Card.Text>
+                                <Button variant="primary">Go somewhere</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col lg={4} md={6}>
+                        <Card className="mb-3">
+                            <Image
+                                src={contactPhoto}
+                                className="card-img-top"
+                                alt={"child and male support worker"}
+                                fluid
+                            />
+                            <Card.Body>
+                                <Card.Title>Contact Us</Card.Title>
+                                <Card.Text>
+                                    How to get in touch with us.
+                                </Card.Text>
+                                <Button variant="primary">Go somewhere</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col lg={4} md={6}>
+                        <Card className="mb-3">
+                            <Image
+                                src={meetTeam}
+                                className="card-img-top"
+                                alt={"child and male support worker"}
+                                fluid
+                            />
+                            <Card.Body>
+                                <Card.Title>Meet The Team</Card.Title>
+                                <Card.Text>
+                                    Who are we?
+                                </Card.Text>
+                                <Button variant="primary">Go somewhere</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col lg={4} md={6}>
+                        <Card className="mb-3">
+                            <Image
+                                src={meetTeam}
+                                className="card-img-top"
+                                alt={"child and male support worker"}
+                                fluid
+                            />
+                            <Card.Body>
+                                <Card.Title>Work For Us</Card.Title>
+                                <Card.Text>
+                                    Apply for a job with Time.
+                                </Card.Text>
+                                <Button variant="primary">Go somewhere</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
+                </div>
+            </Container>
+        )
 }
 export default Home

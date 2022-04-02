@@ -6,3 +6,109 @@
   --mainBlue: #007bff;
 }
 
+ #overlay {
+   position: fixed; /* Sit on top of the page content */
+   display: block; /* Hidden by default */
+   width: 100%; /* Full width (cover the whole page) */
+   height: 100%; /* Full height (cover the whole page) */
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   /*background-color: rgba(0,0,0,0.5); !* Black background with opacity *!*/
+   z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+   pointer-events: none;
+ }
+
+
+body {
+  background-color:  #333;
+}
+
+.App {
+  text-align: center;
+  padding: 30px;
+
+}
+#area {
+  width: 500px;
+  height: 300px;
+  border: 1px solid #555;
+  margin: 0 auto;
+  border-radius: .5em;
+}
+
+#toolbox li {
+  display: inline-block;
+  margin: .5em 0 0 .7em;
+  border-radius: .5em;
+  height: 24px;
+  width: 24px;
+}
+
+.colour-selector:hover {
+  cursor: pointer;
+}
+
+.yellow {
+  background-color: Gold;
+}
+
+.red {
+  background-color: Coral;
+}
+
+.blue {
+  background-color: RoyalBlue;
+}
+
+.green {
+  background-color: PaleGreen;
+}
+
+#portal .container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .modal {
+  z-index: 1;
+  width: 350px;
+  height: 220px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  position: relative;;
+  background: rgba(169, 169, 169, 1);
+  opacity: 1;
+  animation: animate 0.3s;
+}
+.modal button {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  padding: 8px 11px;
+  background: crimson;
+  color: white;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+@keyframes animate {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
