@@ -81,10 +81,6 @@ export function AccessibilityModal(callback, deps) {
                 <Modal.Header closeButton>
                     <Modal.Title>Accessibility Features</Modal.Title>
                 </Modal.Header>
-                {/*<Modal.Body>*/}
-
-
-                {/*</Modal.Body>*/}
                 <Modal.Body className="show-grid">
                     <Container>
                         <Row>
@@ -108,14 +104,13 @@ export function AccessibilityModal(callback, deps) {
                                 screen. If you want to try it out, select a colour below and then use the slider to
                                 adjust how bright or dark you want the overlay to be.
                                 </p>
-                                <div>
-                                    <RangeSlider {...sliderProps} />
-                                </div>
+                                <RangeSlider {...sliderProps} />
                                 <div id='toolbox'>
                                     { renderButtons(colours) }
                                 </div>
                                 <Button onClick={resetColours}>Reset</Button>
-
+                                <br/>
+                                <br/>
                             </Col>
                             <Col xs={12} s={8} md={4}>
                                 <h4>Simplified Text</h4>
@@ -124,10 +119,14 @@ export function AccessibilityModal(callback, deps) {
                                 <div>
                                     <Button onClick={enableSimple}>{buttonText} Simplified Text</Button>
                                 </div>
+                                <br/>
+                                <br/>
                             </Col>
                             <Col xs={12} s={8} md={4}>
                                 <h4>Font Options</h4>
                                 <p>Font</p>
+                                <br/>
+                                <br/>
                             </Col>
                         </Row>
                     </Container>

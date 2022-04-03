@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="454e0e34-28c2-4b1e-9bde-816a21a538d6" name="Changes" comment="edited some UI, added reset button for overlay colour selector">
+    <list default="true" id="454e0e34-28c2-4b1e-9bde-816a21a538d6" name="Changes" comment="added content to footer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +68,7 @@
       <workItem from="1648211623325" duration="6811000" />
       <workItem from="1648473889669" duration="8065000" />
       <workItem from="1648559441634" duration="1764000" />
-      <workItem from="1648566977987" duration="40741000" />
+      <workItem from="1648566977987" duration="41699000" />
     </task>
     <task id="LOCAL-00001" summary="testing commit + added pages directory">
       <created>1645205223205</created>
@@ -240,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649004903288</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="added content to footer">
+      <created>1649006666871</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1649006666871</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,7 +264,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="added images + content cards to home page" />
     <MESSAGE value="reformatted about page + added content, created staff page for routing" />
     <MESSAGE value="added content to about, formatted meet the team page" />
     <MESSAGE value="potential fix to footer overlap" />
@@ -284,6 +288,7 @@
     <MESSAGE value="testing host change" />
     <MESSAGE value="added logic for enabling simplified text&#10;added simplified text button hooked up to logic" />
     <MESSAGE value="edited some UI, added reset button for overlay colour selector" />
-    <option name="LAST_COMMIT_MESSAGE" value="edited some UI, added reset button for overlay colour selector" />
+    <MESSAGE value="added content to footer" />
+    <option name="LAST_COMMIT_MESSAGE" value="added content to footer" />
   </component>
 </project>
