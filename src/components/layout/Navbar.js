@@ -74,7 +74,7 @@ export default function Navigation ({ handleClick }) {
                 <Container>
                     <Col>
                     <Row>
-                        <Navbar.Brand href="/">
+                        <Navbar.Brand>
                             Time Specialist Support
                         </Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
