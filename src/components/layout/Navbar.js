@@ -3,8 +3,15 @@ import { LinkContainer } from 'react-router-bootstrap';
 import * as React from "react";
 import {useContext, useEffect, useState} from "react";
 import {OpacityContext, SetOpacityContext} from "../Contexts";
+import {Modal} from "../Modal";
 
 const Navigation = () => {
+
+    const [showModal, setShowModal] = useState(false);
+
+    const openModal = () => {
+        setShowModal(true);
+    }
 
     const Opacity = useContext(OpacityContext)
     const SetOpacity = useContext(SetOpacityContext)
@@ -17,7 +24,7 @@ const Navigation = () => {
 
     },[Opacity])
 
-    const [colour, setColour] = useState('yellow')
+    const [colour, setColour] = useState(null)
 
     const colours = ['yellow', 'red', 'blue', 'green']
 
@@ -53,7 +60,8 @@ const Navigation = () => {
 
             </Navbar>
 
-            <Navbar bg="light" expand="lg" sticky="top">
+            {/* FUTURE TASK - MAKE THIS STICKY DEPENDENT ON WHETHER MODAL IS ON */}
+            <Navbar bg="light" expand="lg">
                 {/* reference opacity using the state*/}
                 <div id="overlay" style={overlayStyle}>
                 </div>
@@ -97,6 +105,8 @@ const Navigation = () => {
             <br/>
             <div id='toolbox'>
                 { renderButtons(colours) }
+                <button onClick={openModal}>Open Modal</button>
+                {showModal ? <Modal setShowModal={setShowModal} /> : null}
             </div>
         </>
     )

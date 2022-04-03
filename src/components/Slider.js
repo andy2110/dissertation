@@ -27,8 +27,8 @@ const RangeSlider = ({ classes, label, onChange, value, ...sliderProps }) => {
 
     return (
         <div className="range-slider">
-            <p>{label}</p>
-            <h3>value: { sliderVal }</h3>
+            {/*<p>{label}</p>*/}
+            <h3>Overlay Opacity %: { sliderVal }</h3>
             <input
                 type="range"
                 value={sliderVal}

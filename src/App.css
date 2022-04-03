@@ -79,8 +79,8 @@ body {
 }
 .container .modal {
   z-index: 1;
-  width: 350px;
-  height: 220px;
+  width: 750px;
+  height: 620px;
   background: white;
   display: flex;
   align-items: center;

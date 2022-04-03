@@ -7,7 +7,6 @@ import "../../App.css"
 import React, {useCallback, useContext, useEffect, useMemo, useState} from "react";
 import {SetReadabilityContext, ReadabilityContext, SetOpacityContext} from "../Contexts";
 import RangeSlider from "../Slider";
-import {Modal} from "../Modal"
 
 const Home = (callback, deps) => {
 
@@ -35,12 +34,8 @@ const Home = (callback, deps) => {
     useEffect(() => {
         const interval = setInterval(() => {
             if (window.sessionStorage.getItem("timeSpent") > 3000){
-                console.log("READ",Readability)
                 if (Readability === "FALSE"){
-                    console.log('time gone over');
                     SetReadability("TRUE")
-                } else{
-                    console.log("logged previously")
                 }
             }
         }, 3000);
@@ -53,7 +48,6 @@ const Home = (callback, deps) => {
 
     const sliderValueChanged = useCallback((val) => {
         SetOpacity(val)
-        console.log('NEW VALUE', val);
         setParentVal(val);
     });
 
@@ -72,8 +66,6 @@ const Home = (callback, deps) => {
         return (
             <Container>
                 <div>
-                    <button onClick={openModal}>Open Modal</button>
-                    {showModal ? <Modal setShowModal={setShowModal} /> : null}
                 <RangeSlider {...sliderProps} />
                 <h1>{Readability}</h1>
                 <Row>

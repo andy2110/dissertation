@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="454e0e34-28c2-4b1e-9bde-816a21a538d6" name="Changes" comment="page time trigger successful">
-      <change afterPath="$PROJECT_DIR$/src/components/Contexts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Modal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Slider.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/colourbutton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="454e0e34-28c2-4b1e-9bde-816a21a538d6" name="Changes" comment="added the following:&#10;background opacity;&#10;opacity slider;&#10;basic colour selection;&#10;coloured opacity;&#10;basic modal popup box;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Slider.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Navbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Home.js" afterDir="false" />
     </list>
@@ -79,7 +72,7 @@
       <workItem from="1648211623325" duration="6811000" />
       <workItem from="1648473889669" duration="8065000" />
       <workItem from="1648559441634" duration="1764000" />
-      <workItem from="1648566977987" duration="21336000" />
+      <workItem from="1648566977987" duration="24066000" />
     </task>
     <task id="LOCAL-00001" summary="testing commit + added pages directory">
       <created>1645205223205</created>
@@ -193,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648567127862</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="added the following:&#10;background opacity;&#10;opacity slider;&#10;basic colour selection;&#10;coloured opacity;&#10;basic modal popup box;">
+      <created>1648918528354</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1648918528354</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,6 +231,7 @@
     <MESSAGE value="added user tracking buttons" />
     <MESSAGE value="added auto-user tracking to each page, still needs work" />
     <MESSAGE value="page time trigger successful" />
-    <option name="LAST_COMMIT_MESSAGE" value="page time trigger successful" />
+    <MESSAGE value="added the following:&#10;background opacity;&#10;opacity slider;&#10;basic colour selection;&#10;coloured opacity;&#10;basic modal popup box;" />
+    <option name="LAST_COMMIT_MESSAGE" value="added the following:&#10;background opacity;&#10;opacity slider;&#10;basic colour selection;&#10;coloured opacity;&#10;basic modal popup box;" />
   </component>
 </project>
