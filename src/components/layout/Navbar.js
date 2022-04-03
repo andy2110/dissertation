@@ -75,7 +75,7 @@ export default function Navigation ({ handleClick }) {
                     <Col>
                     <Row>
                         <Navbar.Brand href="/">
-                            Time Specialist Support ALEX COTTON I CAN SMELL YOU
+                            Time Specialist Support
                         </Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">

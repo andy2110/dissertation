@@ -8,32 +8,39 @@ const OpacityContext = createContext()
 const SetOpacityContext = createContext()
 const ColourContext = createContext()
 const SetColourContext = createContext()
+const SimpleContext = createContext()
+const SetSimpleContext = createContext()
 
 const ContextProvider = ({children}) => {
     const [readabilityState, setReadabilityState]= useState ("FALSE")
     const [opacityState, setOpacityState] = useState(0.5)
     const [colourState, setColourState] = useState(null)
+    const [simpleState, setSimpleState] = useState(false)
     return (
         <>
-        <OpacityContext.Provider value = {opacityState}>
-            <SetOpacityContext.Provider value = {setOpacityState}>
-                <ReadabilityContext.Provider value={readabilityState}>
-                    <SetReadabilityContext.Provider value = {setReadabilityState}>
+        <ReadabilityContext.Provider value={readabilityState}>
+            <SetReadabilityContext.Provider value = {setReadabilityState}>
+                <SimpleContext.Provider value = {simpleState}>
+                    <SetSimpleContext.Provider value = {setSimpleState}>
                         <ColourContext.Provider value = {colourState}>
                             <SetColourContext.Provider value = {setColourState}>
-                                {children}
+                                <OpacityContext.Provider value = {opacityState}>
+                                    <SetOpacityContext.Provider value = {setOpacityState}>
+                                        {children}
+                                    </SetOpacityContext.Provider>
+                                </OpacityContext.Provider>
                             </SetColourContext.Provider>
                         </ColourContext.Provider>
-                    </SetReadabilityContext.Provider>
-                </ReadabilityContext.Provider>
-            </SetOpacityContext.Provider>
-        </OpacityContext.Provider>
+                    </SetSimpleContext.Provider>
+                </SimpleContext.Provider>
+            </SetReadabilityContext.Provider>
+        </ReadabilityContext.Provider>
         </>
     )
 }
 
 export {ReadabilityContext, ContextProvider, SetReadabilityContext, OpacityContext, SetOpacityContext,
-    ColourContext, SetColourContext}
+    ColourContext, SetColourContext, SimpleContext, SetSimpleContext}
 
 
 

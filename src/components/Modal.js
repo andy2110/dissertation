@@ -3,7 +3,14 @@ import {useCallback, useContext, useMemo, useState} from "react";
 import Navbar from "../components/layout/Navbar";
 import * as React from "react";
 import RangeSlider from "./Slider";
-import {ColourContext, OpacityContext, ReadabilityContext, SetColourContext, SetOpacityContext} from "./Contexts";
+import {
+    ColourContext,
+    OpacityContext,
+    ReadabilityContext,
+    SetColourContext,
+    SetOpacityContext, SetSimpleContext,
+    SimpleContext
+} from "./Contexts";
 
 export function AccessibilityModal(callback, deps) {
     // CONTEXTS
@@ -11,7 +18,8 @@ export function AccessibilityModal(callback, deps) {
     const Opacity = useContext(OpacityContext)
     const SetColour = useContext(SetColourContext)
     const Colour = useContext(ColourContext)
-
+    const Simple = useContext(SimpleContext)
+    const SetSimple = useContext(SetSimpleContext)
     const Readability = useContext(ReadabilityContext)
 
 
@@ -31,6 +39,12 @@ export function AccessibilityModal(callback, deps) {
         [Opacity]
     );
 
+    // HANDLE SIMPLIFIED TEXT
+    const enableSimple = () => {
+        SetSimple(!Simple)
+
+    }
+
 
     // HANDLE OVERLAY COLOUR
     const colours = ['yellow', 'red', 'blue', 'green']
@@ -49,6 +63,11 @@ export function AccessibilityModal(callback, deps) {
     const handleClick = () => {setShow(!show)};
     const handleClose = () => setShow(false);
 
+    const overlayStyle = {
+        opacity: Opacity,
+        backgroundColor: Colour
+    }
+
     return (
         <div>
             <Navbar handleClick={handleClick} />
@@ -64,6 +83,10 @@ export function AccessibilityModal(callback, deps) {
                     </div>
                     <div>
                         <RangeSlider {...sliderProps} />
+                    </div>
+
+                    <div>
+                        <Button onClick={enableSimple}>Enable Simplified Text</Button>
                     </div>
                 </Modal.Body>
                 <Modal.Footer>
