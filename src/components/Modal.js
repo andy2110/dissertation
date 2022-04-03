@@ -1,69 +1,31 @@
-//Modal.js
-import React, {useCallback, useContext, useEffect, useMemo, useRef, useState} from "react";
-import ReactDom from "react-dom";
+import {Button, Modal} from "react-bootstrap";
+import {useCallback, useContext, useMemo, useState} from "react";
+import Navbar from "../components/layout/Navbar";
+import * as React from "react";
 import RangeSlider from "./Slider";
-import {ReadabilityContext, SetOpacityContext, SetReadabilityContext} from "./Contexts";
-import {Container} from "react-bootstrap";
-import styled from 'styled-components';
+import {SetOpacityContext} from "./Contexts";
 
-const ModalContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  line-height: 1.8;
-  color: #141414;
-  p {
-    margin-bottom: 1rem;
-  }
-  button {
-    padding: 10px 24px;
-    background: #141414;
-    color: #fff;
-    border: none;
-  }
-`;
+export function SignIn(callback, deps) {
+    const [show, setShow] = useState(true);
 
-export const Modal = ({ setShowModal }) => {
-    // close the modal when clicking outside the modal.
-    const modalRef = useRef();
-    const closeModal = (e) => {
-        if (e.target === modalRef.current) {
-            setShowModal(false);
-        }
-    };
-
-    const [colour, setColour] = useState(null)
-
-    const colours = ['yellow', 'red', 'blue', 'green']
-
-    const renderButtons = colours => {
-        return colours.map( (colour, index) => {
-            return ( <li key={index}
-                         className={'colour-selector ' + colour}
-                         onClick={() => setColour(colour)}>
-            </li> )
-        })
-    }
-
-    const Readability = useContext(ReadabilityContext)
-    const SetReadability = useContext(SetReadabilityContext)
     const SetOpacity = useContext(SetOpacityContext)
 
-    const [ReadVal,SetReadVal] = useState()
+    const handleClick = () => {
+        setShow(!show);
+    };
+    const handleClose = () => setShow(false);
 
-    useEffect(() => {
 
-        SetReadVal(Readability)
-
-    },[Readability])
-
+    const [colour, setColour] = useState(null)
+    // parent val for opacity slider, change variable names later!
     const [parentVal, setParentVal] = useState(0.5);
 
     const sliderValueChanged = useCallback((val) => {
         SetOpacity(val)
         setParentVal(val);
     });
+
+    const colours = ['yellow', 'red', 'blue', 'green']
 
     const sliderProps = useMemo(
         () => ({
@@ -77,20 +39,42 @@ export const Modal = ({ setShowModal }) => {
         [parentVal]
     );
 
-    //render the modal JSX in the portal div.
-    return ReactDom.createPortal(
-        <div className="container" ref={modalRef} onClick={closeModal}>
-            <div className="modal">
-                <ModalContent>
-                    <h1>test</h1>
+    const renderButtons = colours => {
+        return colours.map( (colour, index) => {
+            return ( <li key={index}
+                         className={'colour-selector ' + colour}
+                         onClick={() => setColour(colour)}>
+            </li> )
+        })
+
+    }
+
+
+
+    return (
+        <div>
+            <Navbar handleClick={handleClick} />
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Header>
+                    <Modal.Title>Accessibility Features</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    We've noticed you spent a long time on this page, would you like to activate any of the
+                    following features?
                     <div id='toolbox'>
                         { renderButtons(colours) }
+                    </div>
+                    <div>
                         <RangeSlider {...sliderProps} />
                     </div>
-                </ModalContent>
-                <button onClick={() => setShowModal(false)}>X</button>
-            </div>
-        </div>,
-        document.getElementById("portal")
+
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                        Close
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+        </div>
     );
-};
+}

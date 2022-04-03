@@ -12,14 +12,8 @@ const Home = (callback, deps) => {
 
     const Readability = useContext(ReadabilityContext)
     const SetReadability = useContext(SetReadabilityContext)
-    const SetOpacity = useContext(SetOpacityContext)
 
     const [ReadVal,SetReadVal] = useState()
-    const [showModal, setShowModal] = useState(false);
-
-    const openModal = () => {
-        setShowModal(true);
-    }
 
     window['stop']()
     window['clear']()
@@ -43,30 +37,9 @@ const Home = (callback, deps) => {
         return () => clearInterval(interval); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
     }, [Readability])
 
-    // parent val for opacity slider, change variable names later!
-    const [parentVal, setParentVal] = useState(0.5);
-
-    const sliderValueChanged = useCallback((val) => {
-        SetOpacity(val)
-        setParentVal(val);
-    });
-
-    const sliderProps = useMemo(
-        () => ({
-            min: 0,
-            max: 0.9,
-            value: parentVal,
-            step: 0.01,
-            label: 'Colour Opacity',
-            onChange: (e) => sliderValueChanged(e),
-        }),
-        [parentVal]
-    );
-
         return (
             <Container>
                 <div>
-                <RangeSlider {...sliderProps} />
                 <h1>{Readability}</h1>
                 <Row>
                     <Col lg={4} md={6}>

@@ -1,17 +1,11 @@
-import {Container, Navbar, Nav, NavDropdown, Row, Col} from "react-bootstrap";
+import {Container, Navbar, Nav, NavDropdown, Row, Col, Button} from "react-bootstrap";
 import { LinkContainer } from 'react-router-bootstrap';
 import * as React from "react";
-import {useContext, useEffect, useState} from "react";
-import {OpacityContext, SetOpacityContext} from "../Contexts";
-import {Modal} from "../Modal";
+import { useContext, useEffect, useState } from "react";
+import { OpacityContext, SetOpacityContext } from "../Contexts";
+import {Modal, SignIn} from "../Modal";
 
-const Navigation = () => {
-
-    const [showModal, setShowModal] = useState(false);
-
-    const openModal = () => {
-        setShowModal(true);
-    }
+export default function Navigation ({ handleClick }) {
 
     const Opacity = useContext(OpacityContext)
     const SetOpacity = useContext(SetOpacityContext)
@@ -24,22 +18,9 @@ const Navigation = () => {
 
     },[Opacity])
 
-    const [colour, setColour] = useState(null)
-
-    const colours = ['yellow', 'red', 'blue', 'green']
-
-    const renderButtons = colours => {
-        return colours.map( (colour, index) => {
-            return ( <li key={index}
-                         className={'colour-selector ' + colour}
-                         onClick={() => setColour(colour)}>
-            </li> )
-        })
-    }
-
     const overlayStyle = {
         opacity: ReadOpacity,
-        backgroundColor: colour
+        // backgroundColor: colour
     }
 
     // use state and context to monitor slider value
@@ -103,13 +84,12 @@ const Navigation = () => {
                 </Container>
             </Navbar>
             <br/>
-            <div id='toolbox'>
-                { renderButtons(colours) }
-                <button onClick={openModal}>Open Modal</button>
-                {showModal ? <Modal setShowModal={setShowModal} /> : null}
+
+            <div>
+                <button onClick={() => handleClick()}>OPEN MODAL</button>
             </div>
         </>
     )
 }
 
-export default Navigation
+// export default Navigation

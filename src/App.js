@@ -12,13 +12,14 @@ import "./App.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as React from 'react'
 import {ContextProvider} from "./components/Contexts";
+import {SignIn} from "./components/Modal";
 
 function App() {
   return (
       <ContextProvider>
           <div>
               <Router>
-                  <Navbar/>
+                  <SignIn/>
                   <div id="body">
                   <Routes>
                       <Route path='*' element={<PageNotFound/>}/>
