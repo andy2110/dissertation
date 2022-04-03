@@ -2,13 +2,19 @@ import {Container, Navbar, Nav, NavDropdown, Row, Col, Button} from "react-boots
 import { LinkContainer } from 'react-router-bootstrap';
 import * as React from "react";
 import { useContext, useEffect, useState } from "react";
-import { OpacityContext, SetOpacityContext } from "../Contexts";
-import {Modal, SignIn} from "../Modal";
+import {ColourContext, OpacityContext, ReadabilityContext, SetOpacityContext, SetReadabilityContext} from "../Contexts";
 
 export default function Navigation ({ handleClick }) {
 
     const Opacity = useContext(OpacityContext)
     const SetOpacity = useContext(SetOpacityContext)
+
+    const Readability = useContext(ReadabilityContext)
+    const SetReadability = useContext(SetReadabilityContext)
+
+    const Colour = useContext(ColourContext)
+
+    const [ReadVal,SetReadVal] = useState()
 
     const [ReadOpacity,SetOpacityVal] = useState()
 
@@ -18,10 +24,29 @@ export default function Navigation ({ handleClick }) {
 
     },[Opacity])
 
+    useEffect(() => {
+
+        SetReadVal(Readability)
+
+    },[Readability])
+
     const overlayStyle = {
         opacity: ReadOpacity,
-        // backgroundColor: colour
+        backgroundColor: Colour
     }
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (window.sessionStorage.getItem("timeSpent") > 5000){
+                if (Readability === "FALSE"){
+                    handleClick()
+                    SetReadability("TRUE")
+                }
+            }
+        }, 5000);
+
+        return () => clearInterval(interval); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
+    }, [Readability])
 
     // use state and context to monitor slider value
     return (
@@ -70,13 +95,9 @@ export default function Navigation ({ handleClick }) {
                                 <LinkContainer to="/contact">
                                     <Nav.Link>Contact Us</Nav.Link>
                                 </LinkContainer>
-                                <NavDropdown title="Further Links" id="basic-nav-dropdown">
-                                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                                    <NavDropdown.Divider />
-                                    <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                                </NavDropdown>
+                                <Nav.Link onClick={handleClick}>
+                                    Accessibility
+                                </Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Row>
@@ -84,10 +105,6 @@ export default function Navigation ({ handleClick }) {
                 </Container>
             </Navbar>
             <br/>
-
-            <div>
-                <button onClick={() => handleClick()}>OPEN MODAL</button>
-            </div>
         </>
     )
 }

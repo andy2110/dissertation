@@ -1,4 +1,3 @@
-import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import Home from './components/pages/Home'
 import About from './components/pages/About'
@@ -12,14 +11,14 @@ import "./App.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as React from 'react'
 import {ContextProvider} from "./components/Contexts";
-import {SignIn} from "./components/Modal";
+import {AccessibilityModal} from "./components/Modal";
 
 function App() {
   return (
       <ContextProvider>
           <div>
               <Router>
-                  <SignIn/>
+                  <AccessibilityModal/>
                   <div id="body">
                   <Routes>
                       <Route path='*' element={<PageNotFound/>}/>

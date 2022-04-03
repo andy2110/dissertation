@@ -6,18 +6,24 @@ const ReadabilityContext = createContext()
 const SetReadabilityContext = createContext()
 const OpacityContext = createContext()
 const SetOpacityContext = createContext()
+const ColourContext = createContext()
+const SetColourContext = createContext()
 
 const ContextProvider = ({children}) => {
     const [readabilityState, setReadabilityState]= useState ("FALSE")
     const [opacityState, setOpacityState] = useState(0.5)
-    console.log("opacity state",opacityState)
+    const [colourState, setColourState] = useState(null)
     return (
         <>
         <OpacityContext.Provider value = {opacityState}>
             <SetOpacityContext.Provider value = {setOpacityState}>
                 <ReadabilityContext.Provider value={readabilityState}>
                     <SetReadabilityContext.Provider value = {setReadabilityState}>
-                        {children}
+                        <ColourContext.Provider value = {colourState}>
+                            <SetColourContext.Provider value = {setColourState}>
+                                {children}
+                            </SetColourContext.Provider>
+                        </ColourContext.Provider>
                     </SetReadabilityContext.Provider>
                 </ReadabilityContext.Provider>
             </SetOpacityContext.Provider>
@@ -26,7 +32,8 @@ const ContextProvider = ({children}) => {
     )
 }
 
-export {ReadabilityContext, ContextProvider, SetReadabilityContext, OpacityContext, SetOpacityContext}
+export {ReadabilityContext, ContextProvider, SetReadabilityContext, OpacityContext, SetOpacityContext,
+    ColourContext, SetColourContext}
 
 
 

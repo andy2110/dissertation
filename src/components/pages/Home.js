@@ -9,38 +9,13 @@ import {SetReadabilityContext, ReadabilityContext, SetOpacityContext} from "../C
 import RangeSlider from "../Slider";
 
 const Home = (callback, deps) => {
-
-    const Readability = useContext(ReadabilityContext)
-    const SetReadability = useContext(SetReadabilityContext)
-
-    const [ReadVal,SetReadVal] = useState()
-
     window['stop']()
     window['clear']()
     window['start']()
 
-    useEffect(() => {
-
-        SetReadVal(Readability)
-
-    },[Readability])
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            if (window.sessionStorage.getItem("timeSpent") > 3000){
-                if (Readability === "FALSE"){
-                    SetReadability("TRUE")
-                }
-            }
-        }, 3000);
-
-        return () => clearInterval(interval); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
-    }, [Readability])
-
         return (
             <Container>
                 <div>
-                <h1>{Readability}</h1>
                 <Row>
                     <Col lg={4} md={6}>
                         <Card className="mb-3">

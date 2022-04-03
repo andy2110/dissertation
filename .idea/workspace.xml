@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="454e0e34-28c2-4b1e-9bde-816a21a538d6" name="Changes" comment="setup basic modal">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="454e0e34-28c2-4b1e-9bde-816a21a538d6" name="Changes" comment="moved slider + colour selector into modal, not functional yet">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Contexts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contexts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Navbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Home.js" afterDir="false" />
@@ -72,7 +73,7 @@
       <workItem from="1648211623325" duration="6811000" />
       <workItem from="1648473889669" duration="8065000" />
       <workItem from="1648559441634" duration="1764000" />
-      <workItem from="1648566977987" duration="28122000" />
+      <workItem from="1648566977987" duration="32335000" />
     </task>
     <task id="LOCAL-00001" summary="testing commit + added pages directory">
       <created>1645205223205</created>
@@ -200,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648983999717</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="moved slider + colour selector into modal, not functional yet">
+      <created>1648988222346</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1648988222346</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,6 +248,7 @@
     <MESSAGE value="page time trigger successful" />
     <MESSAGE value="added the following:&#10;background opacity;&#10;opacity slider;&#10;basic colour selection;&#10;coloured opacity;&#10;basic modal popup box;" />
     <MESSAGE value="setup basic modal" />
-    <option name="LAST_COMMIT_MESSAGE" value="setup basic modal" />
+    <MESSAGE value="moved slider + colour selector into modal, not functional yet" />
+    <option name="LAST_COMMIT_MESSAGE" value="moved slider + colour selector into modal, not functional yet" />
   </component>
 </project>
