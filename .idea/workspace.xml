@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="454e0e34-28c2-4b1e-9bde-816a21a538d6" name="Changes" comment="added logic for enabling simplified text&#10;added simplified text button hooked up to logic">
+    <list default="true" id="454e0e34-28c2-4b1e-9bde-816a21a538d6" name="Changes" comment="edited some UI, added reset button for overlay colour selector">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Slider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Footer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +70,7 @@
       <workItem from="1648211623325" duration="6811000" />
       <workItem from="1648473889669" duration="8065000" />
       <workItem from="1648559441634" duration="1764000" />
-      <workItem from="1648566977987" duration="38988000" />
+      <workItem from="1648566977987" duration="40741000" />
     </task>
     <task id="LOCAL-00001" summary="testing commit + added pages directory">
       <created>1645205223205</created>
@@ -234,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648995586467</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="edited some UI, added reset button for overlay colour selector">
+      <created>1649004903288</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1649004903288</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,7 +259,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="added sticky navbar, changed tab title + icon" />
     <MESSAGE value="added images + content cards to home page" />
     <MESSAGE value="reformatted about page + added content, created staff page for routing" />
     <MESSAGE value="added content to about, formatted meet the team page" />
@@ -278,6 +283,7 @@
     <MESSAGE value="modal triggers on tracking timer, added accessibility button to navbar" />
     <MESSAGE value="testing host change" />
     <MESSAGE value="added logic for enabling simplified text&#10;added simplified text button hooked up to logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="added logic for enabling simplified text&#10;added simplified text button hooked up to logic" />
+    <MESSAGE value="edited some UI, added reset button for overlay colour selector" />
+    <option name="LAST_COMMIT_MESSAGE" value="edited some UI, added reset button for overlay colour selector" />
   </component>
 </project>
