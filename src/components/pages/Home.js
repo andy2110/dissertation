@@ -7,6 +7,7 @@ import "../../App.css"
 import React, {useCallback, useContext, useEffect, useMemo, useState} from "react";
 import {SetReadabilityContext, ReadabilityContext, SetOpacityContext} from "../Contexts";
 import RangeSlider from "../Slider";
+import {Link} from "react-router-dom";
 
 const Home = (callback, deps) => {
     window['stop']()
@@ -30,7 +31,7 @@ const Home = (callback, deps) => {
                                 <Card.Text>
                                     What is Time Specialist Support?
                                 </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
+                                <Link to="/about" className="btn btn-primary">Find Out More</Link>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -47,7 +48,7 @@ const Home = (callback, deps) => {
                                 <Card.Text>
                                     Find out more about the services that Time Specialist support provides.
                                 </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
+                                <Link to="/about" className="btn btn-primary">Find Out More</Link>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -64,7 +65,7 @@ const Home = (callback, deps) => {
                                 <Card.Text>
                                     How to get in touch with us.
                                 </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
+                                <Link to="/contact" className="btn btn-primary">Find Out More</Link>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -81,7 +82,7 @@ const Home = (callback, deps) => {
                                 <Card.Text>
                                     Who are we?
                                 </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
+                                <Link to="/team" className="btn btn-primary">Find Out More</Link>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -98,7 +99,7 @@ const Home = (callback, deps) => {
                                 <Card.Text>
                                     Apply for a job with Time.
                                 </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
+                                <Link to="/vacancies" className="btn btn-primary">Find Out More</Link>
                             </Card.Body>
                         </Card>
                     </Col>

@@ -6,6 +6,7 @@ import Vacancies from './components/pages/Vacancies'
 import Contact from './components/pages/Contact'
 import PageNotFound from "./components/pages/PageNotFound";
 import Staff from "./components/pages/Staff"
+import ScrollTop from "./components/ScrollTop"
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import "./App.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -18,6 +19,7 @@ function App() {
       <ContextProvider>
           <div>
               <Router>
+                  <ScrollTop/>
                   <AccessibilityModal/>
                   <div id="body">
                   <Routes>
