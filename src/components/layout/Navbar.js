@@ -32,7 +32,7 @@ export default function Navigation ({ handleClick }) {
 
     const overlayStyle = {
         opacity: ReadOpacity,
-        backgroundColor: Colour
+        backgroundColor: Colour,
     }
 
     useEffect(() => {

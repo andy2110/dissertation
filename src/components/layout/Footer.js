@@ -1,7 +1,8 @@
 import React from "react";
 import styled from 'styled-components'
-import { Row, Col } from "react-bootstrap";
+import {Row, Col, Container} from "react-bootstrap";
 import { SocialIcon } from 'react-social-icons';
+import {Link} from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -21,12 +22,12 @@ const Footer = () => {
                         </Col>
                         {/*Column 2*/}
                         <Col md={3} sm={6}>
-                            <h4>Lorem ipsum</h4>
+                            <h4>Information</h4>
                             <ul className="list-unstyled">
-                                <li><a href={'/'}>Contact Us</a></li>
-                                <li><a href={'/'}>Further Links</a></li>
-                                <li><a href={'/'}>Support Workers</a></li>
-                                <li><a href={'/'}>Work For Us</a></li>
+                                <li><Link to="/contact">Contact Us</Link></li>
+                                <li><Link to="/notexist">Further Links</Link></li>
+                                <li><Link to="/notexist">Support Workers</Link></li>
+                                <li><Link to="/notexist">Work For Us</Link></li>
                             </ul>
                         </Col>
                         {/*Column 2*/}
@@ -79,10 +80,8 @@ const FooterContainer = styled.footer`
       padding-top: 3rem;
       color: var(--mainWhite);
       position: absolute;
-      //bottom: 0;
       width: 100%;
     }
-
   .footer-bottom {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -91,7 +90,6 @@ const FooterContainer = styled.footer`
   ul li a {
     color: var(--mainLightGrey);
   }
-
   ul li a:hover {
     color: var(--mainGrey);
   }

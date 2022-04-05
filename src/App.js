@@ -13,30 +13,47 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import * as React from 'react'
 import {ContextProvider} from "./components/Contexts";
 import {AccessibilityModal} from "./components/Modal";
+import {useState} from "react";
+import FontPicker from "font-picker-react";
 
 function App() {
-  return (
-      <ContextProvider>
-          <div>
-              <Router>
-                  <ScrollTop/>
-                  <AccessibilityModal/>
-                  <div id="body">
-                  <Routes>
-                      <Route path='*' element={<PageNotFound/>}/>
-                      <Route index element={<Home/>}/>
-                      <Route path='/about' element={<About/>}/>
-                      <Route path='/team' element={<Team/>}/>
-                      <Route path='/vacancy' element={<Vacancies/>}/>
-                      <Route path='/contact' element={<Contact/>}/>
-                      <Route path='/staff' element={<Staff/>}/>
-                  </Routes>
+    const [activeFontFamily, setFont] = useState("Open Sans");
+
+    return (
+      <span className="apply-font-main">
+          <div hidden="true">
+              <FontPicker
+                  apiKey="AIzaSyCwuYnbK1o5D-Y-mkOkYZF5rdTZ9yM8K_E"
+                  pickerId="main"
+                  families={"Open Sans"}
+                  activeFontFamily={activeFontFamily}
+                  onChange={(nextFont) => setFont(nextFont.family)}
+              />
+              </div>
+          <span className="apply-font">
+              <ContextProvider>
+                  <div>
+                      <Router>
+                          <ScrollTop/>
+                          <AccessibilityModal/>
+                          <div id="body">
+                          <Routes>
+                              <Route path='*' element={<PageNotFound/>}/>
+                              <Route index element={<Home/>}/>
+                              <Route path='/about' element={<About/>}/>
+                              <Route path='/team' element={<Team/>}/>
+                              <Route path='/vacancy' element={<Vacancies/>}/>
+                              <Route path='/contact' element={<Contact/>}/>
+                              <Route path='/staff' element={<Staff/>}/>
+                          </Routes>
+                          </div>
+                          <br/>
+                          <Footer/>
+                      </Router>
                   </div>
-              </Router>
-              <br/>
-              <Footer/>
-          </div>
-      </ContextProvider>
+              </ContextProvider>
+              </span>
+      </span>
   );
 }
 

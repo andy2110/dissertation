@@ -11,6 +11,7 @@ import {
     SetOpacityContext, SetSimpleContext,
     SimpleContext
 } from "./Contexts";
+import FontPicker from "font-picker-react";
 
 export function AccessibilityModal(callback, deps) {
     // CONTEXTS
@@ -69,6 +70,10 @@ export function AccessibilityModal(callback, deps) {
     }
 
 
+    // HANDLE FONTS
+    const [activeFontFamily, setFont] = useState("Open Sans");
+
+
     // HANDLE MODAL LOGIC
     const [show, setShow] = useState(false);
     const handleClick = () => {setShow(!show)};
@@ -77,7 +82,9 @@ export function AccessibilityModal(callback, deps) {
     return (
         <div>
             <Navbar handleClick={handleClick} />
-            <Modal size="lg" show={show} onHide={handleClose}>
+            <div hidden="True">
+            <Modal className="apply-font" size="lg" show={show} onHide={handleClose}>
+
                 <Modal.Header closeButton>
                     <Modal.Title>Accessibility Features</Modal.Title>
                 </Modal.Header>
@@ -124,7 +131,20 @@ export function AccessibilityModal(callback, deps) {
                             </Col>
                             <Col xs={12} s={8} md={4}>
                                 <h4>Font Options</h4>
-                                <p>Font</p>
+                                <p>You can make changes to the font of our website below. You can edit the size, colour,
+                                and type of font - please note that making the font size too large may effect how
+                                content is displayed.</p>
+                                <p>If there are any fonts you would like to see added to our webpage, please contact us.</p>
+                                <div>
+                                    {/*AIzaSyCwuYnbK1o5D-Y-mkOkYZF5rdTZ9yM8K_E new API key?*/}
+                                    {/*AIzaSyDPtqHOkdnMVZb6wrHcyz1Mwyn0Au OLD API key*/}
+                                    <FontPicker
+                                        apiKey="AIzaSyCwuYnbK1o5D-Y-mkOkYZF5rdTZ9yM8K_E"
+                                        families={"Lexend, Open Sans, Courier Prime"}
+                                        activeFontFamily={activeFontFamily}
+                                        onChange={(nextFont) => setFont(nextFont.family)}
+                                    />
+                                </div>
                                 <br/>
                                 <br/>
                             </Col>
@@ -137,6 +157,7 @@ export function AccessibilityModal(callback, deps) {
                     </Button>
                 </Modal.Footer>
             </Modal>
+            </div>
 
         </div>
     );

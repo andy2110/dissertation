@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="454e0e34-28c2-4b1e-9bde-816a21a538d6" name="Changes" comment="added content to footer">
-      <change afterPath="$PROJECT_DIR$/src/components/ScrollTop.js" afterDir="false" />
+    <list default="true" id="454e0e34-28c2-4b1e-9bde-816a21a538d6" name="Changes" comment="added font selector">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Navbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +85,7 @@
       <workItem from="1648473889669" duration="8065000" />
       <workItem from="1648559441634" duration="1764000" />
       <workItem from="1648566977987" duration="41699000" />
-      <workItem from="1649075466049" duration="1470000" />
+      <workItem from="1649075466049" duration="11950000" />
     </task>
     <task id="LOCAL-00001" summary="testing commit + added pages directory">
       <created>1645205223205</created>
@@ -255,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649006666871</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="changed button texts + added scroll to top functionality on loading new route">
+      <created>1649077113263</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1649077113263</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,8 +288,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="reformatted about page + added content, created staff page for routing" />
-    <MESSAGE value="added content to about, formatted meet the team page" />
     <MESSAGE value="potential fix to footer overlap" />
     <MESSAGE value="temporary fix to navbar home highlight issue (wrapped /home in two linkcontainers)" />
     <MESSAGE value="deleted redundant css" />
@@ -299,6 +311,8 @@
     <MESSAGE value="added logic for enabling simplified text&#10;added simplified text button hooked up to logic" />
     <MESSAGE value="edited some UI, added reset button for overlay colour selector" />
     <MESSAGE value="added content to footer" />
-    <option name="LAST_COMMIT_MESSAGE" value="added content to footer" />
+    <MESSAGE value="changed button texts + added scroll to top functionality on loading new route" />
+    <MESSAGE value="added font selector" />
+    <option name="LAST_COMMIT_MESSAGE" value="added font selector" />
   </component>
 </project>

@@ -1,18 +1,20 @@
-import {Button, Card, Container, Image, Row, Col} from "react-bootstrap";
+import {Card, Container, Image, Row, Col} from "react-bootstrap";
 import aboutPhoto from "../images/About-TSS-home-page-photo.jpg"
 import contactPhoto from "../images/Contact-home-page-photo.jpg"
 import whatWeDoPhoto from "../images/What-We-Do-home-page-photo.jpg"
 import meetTeam from "../images/Team-home-page-photo.jpg"
 import "../../App.css"
-import React, {useCallback, useContext, useEffect, useMemo, useState} from "react";
-import {SetReadabilityContext, ReadabilityContext, SetOpacityContext} from "../Contexts";
-import RangeSlider from "../Slider";
 import {Link} from "react-router-dom";
+import {useState} from "react";
 
 const Home = (callback, deps) => {
     window['stop']()
     window['clear']()
     window['start']()
+
+    const [sampleText, setSampleText] = useState(
+        "The font will be applied to this text."
+    );
 
         return (
             <Container>
@@ -29,7 +31,7 @@ const Home = (callback, deps) => {
                             <Card.Body>
                                 <Card.Title>About Time Specialist Support</Card.Title>
                                 <Card.Text>
-                                    What is Time Specialist Support?
+                                    What is Time Specialist Support? Find out more about the services we provide.
                                 </Card.Text>
                                 <Link to="/about" className="btn btn-primary">Find Out More</Link>
                             </Card.Body>
