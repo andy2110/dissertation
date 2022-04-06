@@ -6,6 +6,7 @@
   --mainBlue: #007bff;
 }
 
+
  #overlay {
    position: fixed; /* Sit on top of the page content */
    display: block; /* Hidden by default */
@@ -20,6 +21,15 @@
    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
    pointer-events: none;
  }
+
+@font-face {
+  font-family: 'Open Dyslexic';
+  src: url('./components/fonts/opendyslexic-regular-webfont.woff') format('woff2'),
+  url('./components/fonts/opendyslexic-regular-webfont.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
 
 
 body {

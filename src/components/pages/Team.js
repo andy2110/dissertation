@@ -4,11 +4,14 @@ import triciaPhoto from "../images/tricia-photo.jpg"
 import allyPhoto from "../images/Ally-2.jpg"
 import bradleyPhoto from "../images/bradley-photo-scaled-e1599227185514.jpg"
 import sophiePhoto from "../images/pic-of-Sophie-C-1.jpg"
+import {useContext} from "react";
+import {SimpleContext} from "../Contexts";
 
 const Team = () => {
     window['clear']();
     window['stop']();
     window['start'](3000);
+    const Simple = useContext(SimpleContext)
     return(
         <Container>
             <Row>
@@ -31,11 +34,56 @@ const Team = () => {
                         <Card.Body>
                             <Card.Title><h2>Tori</h2></Card.Title>
                             <Card.Text>
-                                <p>As well as setting up and managing Time Specialist support, Tori is also a qualified
-                                    speech and language therapist and has worked with children with autism since
-                                    qualifying in 2000.</p>
-                                <p>She was inspired to set up a specialist support agency when she was studying at
-                                    university.</p>
+                                {
+                                    Simple ?
+                                        <>
+                                            <p>
+                                                Tori created Time Specialist Support. She is a speech and language
+                                                therapist who has worked with children with autism since 2000.
+                                            </p>
+                                            <p>
+                                                She had the idea to set up the business when she was at university.
+                                            </p>
+                                            <blockquote className="blockquote mb-0">
+                                                <p>“After putting up an advert for babysitting in a specialist nursery where I was doing
+                                                    a clinical placement I was overwhelmed at how much families seemed desperate for
+                                                    this kind of support. </p>
+                                                <p> It was then I realised the importance of just having a couple
+                                                    of hours off to do normal things like shopping or to clean the bath.”</p>
+                                            </blockquote>
+                                            <br/>
+                                            <p>
+                                                She set up a business called Time Babysitting in 2008 and changed the
+                                                name to Time Specialist Support in 2012 because it had grown bigger.
+                                            </p>
+                                            <blockquote className="blockquote mb-0">
+                                                <p>“We began to recruit more and more older children, and families wanted us to take
+                                                    their children out rather than staying in. </p>
+                                                <p> Our support workers are much more
+                                                    interactive and hands on than the title babysitter suggested”</p>
+                                            </blockquote>
+                                            <br/>
+                                            <p>
+                                                Tori is also the co-editor of AuKids Magazine (www.aukids.co.uk).
+                                            </p>
+                                            <p>
+                                                In her free time, Tori likes to:
+                                                <ul>
+                                                    <li>Spend time with her son Remy (and their two dogs Tilly and Ted</li>
+                                                    <li>Travel</li>
+                                                    <li>Play Tennis</li>
+                                                    <li>Sing in a weekly group</li>
+                                                </ul>
+                                            </p>
+                                        </>
+                                        :
+                                        <>
+                                        <p>As well as setting up and managing Time Specialist support, Tori is also a qualified
+                                            speech and language therapist and has worked with children with autism since
+                                            qualifying in 2000.</p>
+                                        <p>She was inspired to set up a specialist support agency when she was studying at
+                                            university.</p>
+
 
                             <blockquote className="blockquote mb-0">
                                 <p>“After putting up an advert for babysitting in a specialist nursery where I was doing
@@ -56,6 +104,8 @@ const Team = () => {
                                     (www.aukids.co.uk) Magazine.</p>
                                 <p>In her free time Tori likes to spend time with her son, Remy and  her two dogs, Tilly
                                     and Ted. She loves travelling, playing tennis and  sings in a weekly group.</p>
+                                        </>
+                                }
 
                             </Card.Text>
                         </Card.Body>
@@ -73,6 +123,28 @@ const Team = () => {
                         <Card.Body>
                             <Card.Title><h2>Tricia</h2></Card.Title>
                             <Card.Text>
+                                {
+                                    Simple ?
+                                        <>
+                                            <p>
+                                                Tricia is in charge of collecting money for the company and making sure
+                                                our workers are paid. Tricia works from home. Before working for Time,
+                                                Tricia:
+                                                <ul>
+                                                    <li>Helped her husband run his own business</li>
+                                                    <li>Owned her own card shop</li>
+                                                    <li>Worked as an accountant</li>
+                                                </ul>
+                                                When she is not working Tricia likes to:
+                                                <ul>
+                                                    <li>Play golf</li>
+                                                    <li>Play bridge</li>
+                                                </ul>
+                                                Tricia is also Tori's mum!
+                                            </p>
+                                        </>
+                                        :
+                                        <>
                                 <p>Tricia is in charge of collecting all the time sheets from the support workers,
                                     invoicing families and the council and most importantly making sure that our valued
                                     support workers get paid! Tricia is not based in the Trafford office but works from
@@ -84,8 +156,8 @@ const Team = () => {
                                     mum!</p>
 
                                 <p>tricia@time-specialist-support.com</p>
-
-
+                                        </>
+                                }
                             </Card.Text>
                         </Card.Body>
                     </Card>
@@ -102,6 +174,38 @@ const Team = () => {
                         <Card.Body>
                             <Card.Title><h2>Ally</h2></Card.Title>
                             <Card.Text>
+                                {
+                                    Simple ?
+                                        <>
+                                            <p>
+                                                Ally started working for Time Specialist Support in July 2016 as the new
+                                                Service Manager. She has worked with children and young adults with
+                                                autism and special needs since 2003.
+                                            </p>
+                                            <p>
+                                                She is very experienced. She has worked for the Seashell Trust and the NHS.
+                                            </p>
+                                            <blockquote className="blockquote mb-0">
+                                                <p>“When the chance arose to work for Time I found it was an opportunity too good
+                                                    to pass up. </p>
+                                                <p>We are a forward thinking company that is dedicated to the welfare
+                                                    of the families entrusted to us. </p>
+                                                <p> We constantly strive to improve our service
+                                                    and work within a dedicated team to ensure this happens.”</p>
+                                            </blockquote>
+                                            <br/>
+                                            <p>
+                                                When she is not working, Ally enjoys:
+                                                <ul>
+                                                    <li>Walking her dog</li>
+                                                    <li>Camping (but only when the weather is nice!)</li>
+                                                    <li>Cooking</li>
+                                                </ul>
+                                            </p>
+                                        </>
+                                        :
+                                        <>
+
                                 <p>Ally started working for Time in July 2016 as the new Service Manager. She has worked
                                     with children and young adults with autism and special needs since 2003. She has a
                                     broad spectrum of experience ranging from working for the  Seashell Trust to the
@@ -117,6 +221,8 @@ const Team = () => {
                                     after a weekend away with her 2 teenage boys and the dog she found out that 2
                                     teenagers and a wet dog don’t go well in a tent so is definitely a fair weather
                                     camper!</p>
+                                        </>
+                                }
                             </Card.Text>
                         </Card.Body>
                     </Card>
@@ -133,6 +239,39 @@ const Team = () => {
                         <Card.Body>
                             <Card.Title><h2>Bradley</h2></Card.Title>
                             <Card.Text>
+                                {
+                                    Simple ?
+                                        <>
+                                            <p>
+                                                Bradley started working for Time in January 2017 as an Admin Assistant. He
+                                                later became the Recruitment Coordinator, so he is in charge of hiring new talent!
+                                            </p>
+                                            <blockquote className="blockquote mb-0">
+                                                <p>“I initially worked for Time on a part-time basis and eventually had to find
+                                                    full-time work. </p>
+                                                <p>But after almost 2 years away, in a twist of fate, the same
+                                                    recruitment role became available on a full-time basis and I jumped at the chance
+                                                    to work for this great company again.</p>
+                                                <p>Having shadowed sessions, I’ve witnessed the hugely positive impact the support
+                                                    has on our service users and their families. </p>
+                                                <p>To be part of this in some
+                                                    way gives me a great sense of satisfaction at the end of each day.”</p>
+                                            </blockquote>
+                                            <br/>
+                                            <p>
+                                                Bradley has a degree in Biology and in his spare time he:
+                                                <ul>
+                                                    <li>Plays guitar</li>
+                                                    <li>Sings</li>
+                                                    <li>Writes songs</li>
+                                                    <li>Cycles</li>
+                                                    <li>Hikes</li>
+                                                </ul>
+                                            </p>
+                                        </>
+                                        :
+                                        <>
+
                                 <p>Bradley started working for Time in January 2017 as an Admin Assistant and the role
                                     naturally evolved into working more closely in the recruitment side of things, so
                                     much so that his official role became Recruitment Coordinator – bringing in great
@@ -149,6 +288,8 @@ const Team = () => {
                                 <br/>
                                 <p>Bradley has a degree in Biology and in his spare time he plays guitar, sings, and
                                     writes songs. He also likes cycling, and walking in the UK’s national parks.</p>
+                                        </>
+                                }
                             </Card.Text>
                         </Card.Body>
                     </Card>
@@ -165,6 +306,50 @@ const Team = () => {
                         <Card.Body>
                             <Card.Title><h2>Sophie</h2></Card.Title>
                             <Card.Text>
+                                {
+                                    Simple ?
+                                        <>
+                                            <p>
+                                                Sophie started working for Time Specialist Support in May 2018 as a
+                                                support worker. She was also learning Psychology and Criminology at
+                                                university!
+                                            </p>
+                                            <p>
+                                                Sophie graduated and became a Supervisor. She later became Assistant Manager.
+                                            </p>
+                                            <blockquote className="blockquote mb-0">
+                                                <p>
+                                                    “I was excited when the opportunity arose for me to join the core team at Time.
+                                                    I love the fact that my new role still enables me to do support work as I love
+                                                    going out in to the community meeting and building relationships with Time’s
+                                                    service users and their families.
+                                                </p>
+                                                <p>
+                                                    Support work is more rewarding than I ever
+                                                    could have imagined and working with children has taught me that it really is
+                                                    the little things in life that make all the difference!
+                                                </p>
+                                                <p>
+                                                    I like the fact I had
+                                                    the chance to meet a lot of our families as a support worker first and was able
+                                                    to develop some close relationships with those that I did meet, this is
+                                                    definitely something that I think will assist me in my new role as Assistant
+                                                    Manager.” </p>
+                                            </blockquote>
+                                            <br/>
+                                            <p>
+                                                When Sophie isn’t working she enjoys:
+                                                <ul>
+                                                    <li>Going to the cinema</li>
+                                                    <li>Going to the gym</li>
+                                                    <li>Sunny days out</li>
+                                                </ul>
+                                            </p>
+
+                                        </>
+                                        :
+                                        <>
+
                                 <p>Sophie started working for Time Specialist in May 2018 as a support worker whilst
                                     she was studying Psychology and Criminology at university. Sophie has since
                                     graduated from university and joined the core team- starting out as a Field
@@ -185,6 +370,8 @@ const Team = () => {
                                 <br/>
                                 <p>When Sophie isn’t working she loves to spend time socialising with her family and
                                     friends. She enjoys trips to the cinema, going to the gym and sunny days out! </p>
+                                        </>
+                                }
                             </Card.Text>
                         </Card.Body>
                     </Card>

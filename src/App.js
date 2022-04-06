@@ -15,23 +15,26 @@ import {ContextProvider} from "./components/Contexts";
 import {AccessibilityModal} from "./components/Modal";
 import {useState} from "react";
 import FontPicker from "font-picker-react";
+import './components/fonts/opendyslexic-regular-webfont.woff';
+import './components/fonts/opendyslexic-regular-webfont.woff2';
 
 function App() {
     const [activeFontFamily, setFont] = useState("Open Sans");
 
     return (
-      <span className="apply-font-main">
-          <div hidden="true">
-              <FontPicker
-                  apiKey="AIzaSyCwuYnbK1o5D-Y-mkOkYZF5rdTZ9yM8K_E"
-                  pickerId="main"
-                  families={"Open Sans"}
-                  activeFontFamily={activeFontFamily}
-                  onChange={(nextFont) => setFont(nextFont.family)}
-              />
-              </div>
-          <span className="apply-font">
+        <>
+            <div hidden={true}>
+                <FontPicker
+                    apiKey="AIzaSyCwuYnbK1o5D-Y-mkOkYZF5rdTZ9yM8K_E"
+                    pickerId="main"
+                    families={"Open Sans"}
+                    activeFontFamily={activeFontFamily}
+                    onChange={(nextFont) => setFont(nextFont.family)}
+                />
+            </div>
               <ContextProvider>
+      <span className="apply-font-main">
+          <span className="apply-font">
                   <div>
                       <Router>
                           <ScrollTop/>
@@ -51,9 +54,11 @@ function App() {
                           <Footer/>
                       </Router>
                   </div>
-              </ContextProvider>
               </span>
       </span>
+              </ContextProvider>
+
+        </>
   );
 }
 

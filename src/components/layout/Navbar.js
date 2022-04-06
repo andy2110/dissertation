@@ -4,11 +4,10 @@ import * as React from "react";
 import { useContext, useEffect, useState } from "react";
 import {ColourContext, OpacityContext, ReadabilityContext, SetOpacityContext, SetReadabilityContext} from "../Contexts";
 
-export default function Navigation ({ handleClick }) {
+export default function Navigation ({ handleClick, handleClickAuto }) {
 
     const Opacity = useContext(OpacityContext)
     const SetOpacity = useContext(SetOpacityContext)
-
     const Readability = useContext(ReadabilityContext)
     const SetReadability = useContext(SetReadabilityContext)
 
@@ -39,7 +38,7 @@ export default function Navigation ({ handleClick }) {
         const interval = setInterval(() => {
             if (window.sessionStorage.getItem("timeSpent") > 5000){
                 if (Readability === "FALSE"){
-                    handleClick()
+                    handleClickAuto()
                     SetReadability("TRUE")
                 }
             }

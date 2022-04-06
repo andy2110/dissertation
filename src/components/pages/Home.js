@@ -1,20 +1,15 @@
 import {Card, Container, Image, Row, Col} from "react-bootstrap";
 import aboutPhoto from "../images/About-TSS-home-page-photo.jpg"
-import contactPhoto from "../images/Contact-home-page-photo.jpg"
-import whatWeDoPhoto from "../images/What-We-Do-home-page-photo.jpg"
+import whatWeDoPhoto from "../images/Contact-home-page-photo.jpg"
+import contactPhoto from "../images/What-We-Do-home-page-photo.jpg"
 import meetTeam from "../images/Team-home-page-photo.jpg"
 import "../../App.css"
 import {Link} from "react-router-dom";
-import {useState} from "react";
 
 const Home = (callback, deps) => {
     window['stop']()
     window['clear']()
     window['start']()
-
-    const [sampleText, setSampleText] = useState(
-        "The font will be applied to this text."
-    );
 
         return (
             <Container>
@@ -46,23 +41,6 @@ const Home = (callback, deps) => {
                                 fluid
                             />
                             <Card.Body>
-                                <Card.Title>What We Do</Card.Title>
-                                <Card.Text>
-                                    Find out more about the services that Time Specialist support provides.
-                                </Card.Text>
-                                <Link to="/about" className="btn btn-primary">Find Out More</Link>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                    <Col lg={4} md={6}>
-                        <Card className="mb-3">
-                            <Image
-                                src={contactPhoto}
-                                className="card-img-top"
-                                alt={"child and male support worker"}
-                                fluid
-                            />
-                            <Card.Body>
                                 <Card.Title>Contact Us</Card.Title>
                                 <Card.Text>
                                     How to get in touch with us.
@@ -74,7 +52,7 @@ const Home = (callback, deps) => {
                     <Col lg={4} md={6}>
                         <Card className="mb-3">
                             <Image
-                                src={meetTeam}
+                                src={contactPhoto}
                                 className="card-img-top"
                                 alt={"child and male support worker"}
                                 fluid
