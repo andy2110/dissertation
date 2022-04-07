@@ -16,7 +16,9 @@ const Vacancies = () => {
 
     return(
         <Container style={pageStyle}>
-            <h1>Vacancy page here</h1>
+            <h1>Work For Us</h1>
+            <hr/>
+            <p>Unfortunately, there are no current job vacancies available.</p>
             <br/>
             <br/>
             <br/>

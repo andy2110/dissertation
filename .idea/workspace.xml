@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="454e0e34-28c2-4b1e-9bde-816a21a538d6" name="Changes" comment="added final colours for overlay, font, and background changes - implemented functionality throughout website">
+    <list default="true" id="454e0e34-28c2-4b1e-9bde-816a21a538d6" name="Changes" comment="fixed console error with google font picker">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Contexts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contexts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Vacancies.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Vacancies.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +80,7 @@
       <workItem from="1648473889669" duration="8065000" />
       <workItem from="1648559441634" duration="1764000" />
       <workItem from="1648566977987" duration="41699000" />
-      <workItem from="1649075466049" duration="44613000" />
+      <workItem from="1649075466049" duration="45872000" />
     </task>
     <task id="LOCAL-00001" summary="testing commit + added pages directory">
       <created>1645205223205</created>
@@ -286,7 +285,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649338055811</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="fixed console error with google font picker">
+      <created>1649339590268</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1649339590268</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,7 +311,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="changed blank path to render home component" />
     <MESSAGE value="added padding" />
     <MESSAGE value="added content to meet the team page" />
     <MESSAGE value="edit to default element for routing" />
@@ -330,6 +335,7 @@
     <MESSAGE value="minor changes to modal structure + added simplified text options to all pages" />
     <MESSAGE value="added text background colour changing + basic font colour changing" />
     <MESSAGE value="added final colours for overlay, font, and background changes - implemented functionality throughout website" />
-    <option name="LAST_COMMIT_MESSAGE" value="added final colours for overlay, font, and background changes - implemented functionality throughout website" />
+    <MESSAGE value="fixed console error with google font picker" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed console error with google font picker" />
   </component>
 </project>

@@ -57,9 +57,13 @@ export default function Navigation ({ handleClick, handleClickAuto }) {
 
     let pageStyle;
     if (FontColour !== "#000000"){
+            pageStyle = {
+                backgroundColor: TextColour,
+                color: FontColour
+            }
+        } else {
         pageStyle = {
-            backgroundColor: TextColour,
-            color: FontColour
+            backgroundColor: TextColour
         }
     }
 

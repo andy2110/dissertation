@@ -117,8 +117,8 @@ export function AccessibilityModal(callback, deps) {
         SetSimple(false)
         setButtonText("Enable")
         setFont("Open Sans")
-        SetTextColour("#FFFFFF")
-        SetFontColour("#000000")
+        SetTextColour(null)
+        SetFontColour(null)
     }
 
     return (
