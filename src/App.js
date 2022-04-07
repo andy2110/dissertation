@@ -11,12 +11,9 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import "./App.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as React from 'react'
-import {ContextProvider} from "./components/Contexts";
 import {AccessibilityModal} from "./components/Modal";
-import {useState} from "react";
+import { useState} from "react";
 import FontPicker from "font-picker-react";
-import './components/fonts/opendyslexic-regular-webfont.woff';
-import './components/fonts/opendyslexic-regular-webfont.woff2';
 
 function App() {
     const [activeFontFamily, setFont] = useState("Open Sans");
@@ -32,31 +29,29 @@ function App() {
                     onChange={(nextFont) => setFont(nextFont.family)}
                 />
             </div>
-              <ContextProvider>
-      <span className="apply-font-main">
-          <span className="apply-font">
-                  <div>
-                      <Router>
-                          <ScrollTop/>
-                          <AccessibilityModal/>
-                          <div id="body">
-                          <Routes>
-                              <Route path='*' element={<PageNotFound/>}/>
-                              <Route index element={<Home/>}/>
-                              <Route path='/about' element={<About/>}/>
-                              <Route path='/team' element={<Team/>}/>
-                              <Route path='/vacancy' element={<Vacancies/>}/>
-                              <Route path='/contact' element={<Contact/>}/>
-                              <Route path='/staff' element={<Staff/>}/>
-                          </Routes>
-                          </div>
-                          <br/>
-                          <Footer/>
-                      </Router>
-                  </div>
-              </span>
-      </span>
-              </ContextProvider>
+                  <span className="apply-font-main">
+                      <span className="apply-font">
+                              <div>
+                                  <Router>
+                                      <ScrollTop/>
+                                      <AccessibilityModal/>
+                                      <div id="body">
+                                      <Routes>
+                                          <Route path='*' element={<PageNotFound/>}/>
+                                          <Route index element={<Home/>}/>
+                                          <Route path='/about' element={<About/>}/>
+                                          <Route path='/team' element={<Team/>}/>
+                                          <Route path='/vacancy' element={<Vacancies/>}/>
+                                          <Route path='/contact' element={<Contact/>}/>
+                                          <Route path='/staff' element={<Staff/>}/>
+                                      </Routes>
+                                      </div>
+                                      <br/>
+                                      <Footer/>
+                                  </Router>
+                              </div>
+                          </span>
+                  </span>
 
         </>
   );

@@ -5,17 +5,25 @@ import allyPhoto from "../images/Ally-2.jpg"
 import bradleyPhoto from "../images/bradley-photo-scaled-e1599227185514.jpg"
 import sophiePhoto from "../images/pic-of-Sophie-C-1.jpg"
 import {useContext} from "react";
-import {SimpleContext} from "../Contexts";
+import {FontColourContext, SimpleContext, TextColourContext} from "../Contexts";
 
 const Team = () => {
     window['clear']();
     window['stop']();
-    window['start'](3000);
+    window['start']();
     const Simple = useContext(SimpleContext)
+    const TextColour = useContext(TextColourContext)
+    const FontColour = useContext(FontColourContext)
+
+    const pageStyle = {
+        backgroundColor: TextColour,
+        color: FontColour
+    }
+
     return(
         <Container>
             <Row>
-                <Col>
+                <Col style={pageStyle}>
                     <h1>Meet The Team</h1>
                     <p>At Time Specialist Support, we employ people who understand the needs of people living with special needs. We pride ourselves on being flexible around your specific needs.</p>
                     <p>If you call or email Time Specialist Support – here are the faces behind the names of those helping you.</p>
@@ -24,7 +32,7 @@ const Team = () => {
 
             <Row>
                 <Col lg={4} md={6}>
-                    <Card className="mb-3">
+                    <Card className="mb-3" style={pageStyle}>
                         <Image
                             src={toriPhoto}
                             className="card-img-top"
@@ -113,7 +121,7 @@ const Team = () => {
                 </Col>
 
                 <Col lg={4} md={6}>
-                    <Card className="mb-3">
+                    <Card className="mb-3" style={pageStyle}>
                         <Image
                             src={triciaPhoto}
                             className="card-img-top"
@@ -164,7 +172,7 @@ const Team = () => {
                 </Col>
 
                 <Col lg={4} md={6}>
-                    <Card className="mb-3">
+                    <Card className="mb-3" style={pageStyle}>
                         <Image
                             src={allyPhoto}
                             className="card-img-top"
@@ -188,8 +196,14 @@ const Team = () => {
                                             <blockquote className="blockquote mb-0">
                                                 <p>“When the chance arose to work for Time I found it was an opportunity too good
                                                     to pass up. </p>
+                                            </blockquote>
+                                            <br/>
+                                            <blockquote className="blockquote mb-0">
                                                 <p>We are a forward thinking company that is dedicated to the welfare
                                                     of the families entrusted to us. </p>
+                                                </blockquote>
+                                            <br/>
+                                                <blockquote className="blockquote mb-0">
                                                 <p> We constantly strive to improve our service
                                                     and work within a dedicated team to ensure this happens.”</p>
                                             </blockquote>
@@ -229,7 +243,7 @@ const Team = () => {
                 </Col>
 
                 <Col lg={4} md={6}>
-                    <Card className="mb-3">
+                    <Card className="mb-3" style={pageStyle}>
                         <Image
                             src={bradleyPhoto}
                             className="card-img-top"
@@ -249,11 +263,20 @@ const Team = () => {
                                             <blockquote className="blockquote mb-0">
                                                 <p>“I initially worked for Time on a part-time basis and eventually had to find
                                                     full-time work. </p>
+                                            </blockquote>
+                                            <br/>
+                                            <blockquote className="blockquote mb-0">
                                                 <p>But after almost 2 years away, in a twist of fate, the same
                                                     recruitment role became available on a full-time basis and I jumped at the chance
                                                     to work for this great company again.</p>
+                                            </blockquote>
+                                            <br/>
+                                            <blockquote className="blockquote mb-0">
                                                 <p>Having shadowed sessions, I’ve witnessed the hugely positive impact the support
                                                     has on our service users and their families. </p>
+                                            </blockquote>
+                                            <br/>
+                                            <blockquote className="blockquote mb-0">
                                                 <p>To be part of this in some
                                                     way gives me a great sense of satisfaction at the end of each day.”</p>
                                             </blockquote>
@@ -271,32 +294,34 @@ const Team = () => {
                                         </>
                                         :
                                         <>
-
-                                <p>Bradley started working for Time in January 2017 as an Admin Assistant and the role
-                                    naturally evolved into working more closely in the recruitment side of things, so
-                                    much so that his official role became Recruitment Coordinator – bringing in great
-                                    new support workers for our service users.</p>
-                                <blockquote className="blockquote mb-0">
-                                    <p>“I initially worked for Time on a part-time basis and eventually had to find
-                                    full-time work but after almost 2 years away, in a twist of fate, the same
-                                    recruitment role became available on a full-time basis and I jumped at the chance
-                                    to work for this great company again.</p>
-                                    <p>Having shadowed sessions, I’ve witnessed the hugely positive impact the support
-                                        has on our service users and their families, and to be part of this in some
-                                        way gives me a great sense of satisfaction at the end of each day.”</p>
-                                </blockquote>
-                                <br/>
-                                <p>Bradley has a degree in Biology and in his spare time he plays guitar, sings, and
-                                    writes songs. He also likes cycling, and walking in the UK’s national parks.</p>
-                                        </>
-                                }
+                                            <p>Bradley started working for Time in January 2017 as an Admin Assistant and the role
+                                                naturally evolved into working more closely in the recruitment side of things, so
+                                                much so that his official role became Recruitment Coordinator – bringing in great
+                                                new support workers for our service users.</p>
+                                            <blockquote className="blockquote mb-0">
+                                                <p>“I initially worked for Time on a part-time basis and eventually had to find
+                                                full-time work but after almost 2 years away, in a twist of fate, the same
+                                                recruitment role became available on a full-time basis and I jumped at the chance
+                                                to work for this great company again.</p>
+                                            </blockquote>
+                                            <br/>
+                                            <blockquote className="blockquote mb-0">
+                                                <p>Having shadowed sessions, I’ve witnessed the hugely positive impact the support
+                                                    has on our service users and their families, and to be part of this in some
+                                                    way gives me a great sense of satisfaction at the end of each day.”</p>
+                                            </blockquote>
+                                            <br/>
+                                            <p>Bradley has a degree in Biology and in his spare time he plays guitar, sings, and
+                                                writes songs. He also likes cycling, and walking in the UK’s national parks.</p>
+                                                    </>
+                                        }
                             </Card.Text>
                         </Card.Body>
                     </Card>
                 </Col>
 
                 <Col lg={4} md={6}>
-                    <Card className="mb-3">
+                    <Card className="mb-3" style={pageStyle}>
                         <Image
                             src={sophiePhoto}
                             className="card-img-top"
@@ -324,11 +349,17 @@ const Team = () => {
                                                     going out in to the community meeting and building relationships with Time’s
                                                     service users and their families.
                                                 </p>
+                                            </blockquote>
+                                            <br/>
+                                            <blockquote className="blockquote mb-0">
                                                 <p>
                                                     Support work is more rewarding than I ever
                                                     could have imagined and working with children has taught me that it really is
                                                     the little things in life that make all the difference!
                                                 </p>
+                                            </blockquote>
+                                            <br/>
+                                            <blockquote className="blockquote mb-0">
                                                 <p>
                                                     I like the fact I had
                                                     the chance to meet a lot of our families as a support worker first and was able

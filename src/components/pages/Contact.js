@@ -1,9 +1,22 @@
+import {useContext} from "react";
+import {FontColourContext, TextColourContext} from "../Contexts";
+import {Container} from "react-bootstrap";
+
 const Contact = () => {
         window['clear']();
         window['stop']();
         window['start']();
+
+        const TextColour = useContext(TextColourContext)
+        const FontColour = useContext(FontColourContext)
+
+        const pageStyle = {
+                backgroundColor: TextColour,
+                color: FontColour
+        }
+
     return(
-        <>
+        <Container style={pageStyle}>
             <h1>Contact us page here</h1>
             <br/>
             <br/>
@@ -19,7 +32,7 @@ const Contact = () => {
             <br/>
             <br/>
             <br/>
-        </>
+        </Container>
     )
 }
 

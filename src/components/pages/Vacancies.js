@@ -1,14 +1,37 @@
-// import Tracker from "../../mouse";
+import {useContext} from "react";
+import {FontColourContext, TextColourContext} from "../Contexts";
+import {Container} from "react-bootstrap";
 
 const Vacancies = () => {
-    window['clear']();
-    window['stop']();
-    window['start']();
-    return(
-        <>
+    const TextColour = useContext(TextColourContext)
+    const FontColour = useContext(FontColourContext)
+    window['stop']()
+    window['clear']()
+    window['start']()
 
-            <h1>Contact us page here</h1>
-        </>
+    const pageStyle = {
+        backgroundColor: TextColour,
+        color: FontColour
+    }
+
+    return(
+        <Container style={pageStyle}>
+            <h1>Vacancy page here</h1>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+        </Container>
 
     )
 }

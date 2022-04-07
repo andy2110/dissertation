@@ -5,10 +5,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './components/fonts/opendyslexic-regular-webfont.woff';
 import './components/fonts/opendyslexic-regular-webfont.woff2';
+import {ContextProvider} from "./components/Contexts";
 
 ReactDOM.render(
   <React.StrictMode>
-      <App />
+      <ContextProvider>
+          <App />
+      </ContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

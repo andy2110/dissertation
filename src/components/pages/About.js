@@ -1,7 +1,7 @@
 import {Container, Row, Col, Card, Image} from "react-bootstrap";
 import aboutExamplePhoto from "../images/about-page-example-photo.jpg"
 import {useContext} from "react";
-import {SimpleContext} from "../Contexts";
+import {FontColourContext, SimpleContext, TextColourContext} from "../Contexts";
 import {Link} from "react-router-dom";
 
 const About = () => {
@@ -9,9 +9,16 @@ const About = () => {
     window['stop']();
     window['start'](3000);
     const Simple = useContext(SimpleContext)
+    const TextColour = useContext(TextColourContext)
+    const FontColour = useContext(FontColourContext)
+
+    const pageStyle = {
+        backgroundColor: TextColour,
+        color: FontColour
+    }
 
     return(
-        <Container>
+        <Container style={pageStyle}>
             <Row>
                 <Col>
                     <h1>About Us</h1>
@@ -114,7 +121,7 @@ const About = () => {
                     }
                 </Col>
                 <Col>
-                    <Card className="mb-3" style={{ width: '12rem' }}>
+                    <Card className="mb-3" style={pageStyle}>
                         <Image
                             src={aboutExamplePhoto}
                             className="card-img-top"

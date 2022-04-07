@@ -5,9 +5,8 @@ import * as React from "react";
 import RangeSlider from "./Slider";
 import {
     OpacityContext,
-    ReadabilityContext,
-    SetColourContext,
-    SetOpacityContext, SetReadabilityContext, SetSimpleContext,
+    SetColourContext, SetFontColourContext,
+    SetOpacityContext, SetReadabilityContext, SetSimpleContext, SetTextColourContext,
     SimpleContext
 } from "./Contexts";
 import FontPicker from "font-picker-react";
@@ -20,6 +19,8 @@ export function AccessibilityModal(callback, deps) {
     const Simple = useContext(SimpleContext)
     const SetSimple = useContext(SetSimpleContext)
     const SetReadability = useContext(SetReadabilityContext)
+    const SetTextColour = useContext(SetTextColourContext)
+    const SetFontColour = useContext(SetFontColourContext)
 
     // HANDLE OPACITY SLIDER
     const sliderValueChanged = useCallback((val) => {
@@ -39,28 +40,44 @@ export function AccessibilityModal(callback, deps) {
 
 
     // HANDLE OVERLAY COLOUR
-    const colours = ['yellow', 'red', 'blue', 'green']
+    const colours = ['#F6BB00', '#1EB742', '#FF3334', '#0C96E4', '#ff33bb', '#ff91da']
     const renderButtons = colours => {
         return colours.map( (colour, index) => {
             return ( <li key={index}
                          className={'colour-selector ' + colour}
+                         style={{backgroundColor: colour}}
                          onClick={() => SetColour(colour)}>
             </li> )
         })
     }
 
-    const resetSettings = () => {
-        SetColour(null)
-        SetOpacity(0.5)
-        SetSimple(false)
-        setButtonText("Enable")
-        setFont("Open Sans")
+    const coloursText = ["#FFFF00", "#FAFAC8", "#FFFFE5", "#B9B900",
+        "#A0A000", "#e39b1e"]
+    const renderButtonsFont = coloursText => {
+        return coloursText.map( (colour, index) => {
+            return ( <li key={index}
+                         className={'colour-selector '}
+                         style={{backgroundColor: colour}}
+                         onClick={() => SetTextColour(colour)}>
+            </li> )
+        })
+    }
+
+    const coloursFont = ["#000000", "#0A0A0A", "#00007D", "#1E1E00",
+        "#282800", "#FFFFFF"]
+    const renderButtonsText = coloursFont => {
+        return coloursFont.map( (colour, index) => {
+            return ( <li key={index}
+                         className={'colour-selector '}
+                         style={{backgroundColor: colour}}
+                         onClick={() => SetFontColour(colour)}>
+            </li> )
+        })
     }
 
 
     // HANDLE FONTS
     const [activeFontFamily, setFont] = useState("Open Sans");
-
 
 
     // HANDLE MODAL LOGIC
@@ -90,6 +107,18 @@ export function AccessibilityModal(callback, deps) {
         } else {
             setButtonText("Disable")
         }
+    }
+
+
+    // RESET
+    const resetSettings = () => {
+        SetColour(null)
+        SetOpacity(0.5)
+        SetSimple(false)
+        setButtonText("Enable")
+        setFont("Open Sans")
+        SetTextColour("#FFFFFF")
+        SetFontColour("#000000")
     }
 
     return (
@@ -134,7 +163,7 @@ export function AccessibilityModal(callback, deps) {
                                             <div>
                                                 <p>The following features are to assist with reading comprehension. If
                                                     you want to exit, simply click away from this pop-up
-                                                    box.</p>
+                                                    box or press escape.</p>
                                                 <p>To view these settings in the future, you can click 'Accessibility'
                                                     on the navigation bar. If there are any settings you would like to see
                                                     added to our website, please contact us.</p>
@@ -143,6 +172,7 @@ export function AccessibilityModal(callback, deps) {
                                 }
                             </Col>
                         </Row>
+                        <hr/>
                         <Row>
                             <Col xs={12} s={8} md={4}>
                                 <h4>Colour Overlay</h4>
@@ -193,9 +223,11 @@ export function AccessibilityModal(callback, deps) {
                         <hr/>
                         <Row>
                             <Col xs={12} s={8} md={4}>
-                                <div id='toolbox'>
+                                <h6>Overlay Colour</h6>
+                                <div id='toolbox' style={{backgroundColor: "WhiteSmoke"}}>
                                     { renderButtons(colours) }
                                 </div>
+                                <br/>
                                 <RangeSlider {...sliderProps} />
                             </Col>
                             <Col xs={12} s={8} md={4}>
@@ -204,7 +236,18 @@ export function AccessibilityModal(callback, deps) {
                                 </div>
                             </Col>
                             <Col xs={12} s={8} md={4}>
+                                <h6>Background Colour</h6>
+                                <div id='toolbox' style={{backgroundColor: "WhiteSmoke"}}>
+                                    { renderButtonsFont(coloursText) }
+                                </div>
+                                <br/>
+                                <h6>Text Colour</h6>
+                                <div id='toolbox' style={{backgroundColor: "WhiteSmoke"}}>
+                                    { renderButtonsText(coloursFont) }
+                                </div>
+                                <br/>
                                 <div>
+                                    <h6>Font Selector</h6>
                                     <FontPicker
                                         apiKey="AIzaSyCwuYnbK1o5D-Y-mkOkYZF5rdTZ9yM8K_E"
                                         families={"Lexend, Open Sans, Courier Prime"}

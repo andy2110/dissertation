@@ -5,18 +5,28 @@ import contactPhoto from "../images/What-We-Do-home-page-photo.jpg"
 import meetTeam from "../images/Team-home-page-photo.jpg"
 import "../../App.css"
 import {Link} from "react-router-dom";
+import {FontColourContext, SetFontColourContext, TextColourContext} from "../Contexts";
+import {useContext} from "react";
 
 const Home = (callback, deps) => {
+    const TextColour = useContext(TextColourContext)
+    const FontColour = useContext(FontColourContext)
     window['stop']()
     window['clear']()
     window['start']()
+
+    const pageStyle = {
+        backgroundColor: TextColour,
+        color: FontColour
+    }
+
 
         return (
             <Container>
                 <div>
                 <Row>
                     <Col lg={4} md={6}>
-                        <Card className="mb-3">
+                        <Card className="mb-3" style={pageStyle}>
                             <Image
                                 src={aboutPhoto}
                                 className="card-img-top"
@@ -33,7 +43,7 @@ const Home = (callback, deps) => {
                         </Card>
                     </Col>
                     <Col lg={4} md={6}>
-                        <Card className="mb-3">
+                        <Card className="mb-3" style={pageStyle}>
                             <Image
                                 src={whatWeDoPhoto}
                                 className="card-img-top"
@@ -50,7 +60,7 @@ const Home = (callback, deps) => {
                         </Card>
                     </Col>
                     <Col lg={4} md={6}>
-                        <Card className="mb-3">
+                        <Card className="mb-3" style={pageStyle}>
                             <Image
                                 src={contactPhoto}
                                 className="card-img-top"
@@ -67,7 +77,7 @@ const Home = (callback, deps) => {
                         </Card>
                     </Col>
                     <Col lg={4} md={6}>
-                        <Card className="mb-3">
+                        <Card className="mb-3" style={pageStyle}>
                             <Image
                                 src={meetTeam}
                                 className="card-img-top"

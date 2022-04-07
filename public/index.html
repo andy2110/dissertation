@@ -53,7 +53,6 @@
   function alertTime(readingTime){
     // setTimeout(() => {  alert("Time exceeded"); }, readingTime);
     const time = sessionStorage.getItem("timeSpent");
-    console.log(time);
     if (time > readingTime){
       alert("Time exceeded");
     }
@@ -81,7 +80,6 @@
       clearAfterProcess: false,
       processTime: 0.1,
       processData: function(results){
-        // console.log(results);
         sessionStorage.setItem("clickCount", results.clicks.clickCount);
         sessionStorage.setItem("clickDetails", results.clicks.clickDetails);
         sessionStorage.setItem("contextChange", results.contextChange);
@@ -92,11 +90,9 @@
         sessionStorage.setItem("timeSpent", (results.time.currentTime - results.time.startTime).toString());
       },
     })
-    console.log("TEST")
     userBehaviour.start()
     setTimeout(() => {
       const time = sessionStorage.getItem("timeSpent");
-      console.log(time);
       if (time > readingTime){
         alert("Time exceeded");
       }}, 500);

@@ -4,6 +4,11 @@
   --mainLightGrey: rgba(172, 172, 172);
   --mainWhite: #fff;
   --mainBlue: #007bff;
+  --yellowText: #FFFF00;
+  --cremeText: #FAFAC8;
+  --offWhiteText: #FFFFE5;
+  --lightGreenText: #B9B900;
+  --darkGreenText: #A0A000;
 }
 
 
@@ -61,22 +66,44 @@ body {
   cursor: pointer;
 }
 
+.customCard {
+  background: #FFFFE5 !important;
+}
+
 .yellow {
-  background-color: Gold;
+  background-color: #F6BB00;
 }
 
 .red {
-  background-color: Coral;
+  background-color: #FF3334;
 }
 
 .blue {
-  background-color: RoyalBlue;
+  background-color: #0C96E4;
 }
 
 .green {
-  background-color: PaleGreen;
+  background-color: #1EB742;
 }
 
-.white {
-  background-color: White;
-}
+/*.one {*/
+/*  background-color: var(--yellowText);*/
+/*}*/
+
+/*.two {*/
+/*  background-color: var(--cremeText);*/
+/*}*/
+
+/*.three {*/
+/*  background-color: var(--offWhiteText);*/
+/*}*/
+
+/*.four {*/
+/*  background-color: var(--lightGreenText);*/
+/*}*/
+
+/*.five {*/
+/*  background-color: var(--darkGreenText);*/
+/*}*/
+
+

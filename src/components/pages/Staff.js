@@ -1,9 +1,21 @@
+import {useContext} from "react";
+import {FontColourContext, TextColourContext} from "../Contexts";
+
 const Staff = () => {
         window['clear']();
         window['stop']();
         window['start']();
+
+        const TextColour = useContext(TextColourContext)
+        const FontColour = useContext(FontColourContext)
+
+        const pageStyle = {
+                backgroundColor: TextColour,
+                color: FontColour
+        }
+
     return(
-        <>
+        <Container style={pageStyle}>
             <h1>Staff page here</h1>
             <br/>
             <br/>
@@ -19,7 +31,7 @@ const Staff = () => {
             <br/>
             <br/>
             <br/>
-        </>
+        </Container>
     )
 }
 

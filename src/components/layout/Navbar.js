@@ -2,7 +2,14 @@ import {Container, Navbar, Nav, NavDropdown, Row, Col, Button} from "react-boots
 import { LinkContainer } from 'react-router-bootstrap';
 import * as React from "react";
 import { useContext, useEffect, useState } from "react";
-import {ColourContext, OpacityContext, ReadabilityContext, SetOpacityContext, SetReadabilityContext} from "../Contexts";
+import {
+    ColourContext, FontColourContext,
+    OpacityContext,
+    ReadabilityContext,
+    SetOpacityContext,
+    SetReadabilityContext,
+    TextColourContext
+} from "../Contexts";
 
 export default function Navigation ({ handleClick, handleClickAuto }) {
 
@@ -10,8 +17,9 @@ export default function Navigation ({ handleClick, handleClickAuto }) {
     const SetOpacity = useContext(SetOpacityContext)
     const Readability = useContext(ReadabilityContext)
     const SetReadability = useContext(SetReadabilityContext)
-
     const Colour = useContext(ColourContext)
+    const TextColour = useContext(TextColourContext)
+    const FontColour = useContext(FontColourContext)
 
     const [ReadVal,SetReadVal] = useState()
 
@@ -47,6 +55,11 @@ export default function Navigation ({ handleClick, handleClickAuto }) {
         return () => clearInterval(interval); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
     }, [Readability])
 
+    const pageStyle = {
+        backgroundColor: TextColour,
+        color: FontColour
+    }
+
     // use state and context to monitor slider value
     return (
         <>
@@ -70,31 +83,31 @@ export default function Navigation ({ handleClick, handleClickAuto }) {
                 {/* reference opacity using the state*/}
                 <div id="overlay" style={overlayStyle}>
                 </div>
-                <Container>
+                <Container style={pageStyle}>
                     <Col>
                     <Row>
-                        <Navbar.Brand>
+                        <Navbar.Brand style={pageStyle}>
                             Time Specialist Support
                         </Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="me-auto">
-                                <LinkContainer to="/">
+                                <LinkContainer to="/" style={pageStyle}>
                                         <Nav.Link>Home</Nav.Link>
                                 </LinkContainer>
-                                <LinkContainer to="/about">
+                                <LinkContainer to="/about" style={pageStyle}>
                                     <Nav.Link>About us</Nav.Link>
                                 </LinkContainer>
-                                <LinkContainer to="/team">
+                                <LinkContainer to="/team" style={pageStyle}>
                                     <Nav.Link>Meet the Team</Nav.Link>
                                 </LinkContainer>
-                                <LinkContainer to="/vacancy">
+                                <LinkContainer to="/vacancy" style={pageStyle}>
                                     <Nav.Link>Vacancies</Nav.Link>
                                 </LinkContainer>
-                                <LinkContainer to="/contact">
+                                <LinkContainer to="/contact" style={pageStyle}>
                                     <Nav.Link>Contact Us</Nav.Link>
                                 </LinkContainer>
-                                <Nav.Link onClick={handleClick}>
+                                <Nav.Link onClick={handleClick} style={pageStyle}>
                                     Accessibility
                                 </Nav.Link>
                             </Nav>
