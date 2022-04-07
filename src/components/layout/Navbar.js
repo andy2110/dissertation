@@ -55,10 +55,14 @@ export default function Navigation ({ handleClick, handleClickAuto }) {
         return () => clearInterval(interval); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
     }, [Readability])
 
-    const pageStyle = {
-        backgroundColor: TextColour,
-        color: FontColour
+    let pageStyle;
+    if (FontColour !== "#000000"){
+        pageStyle = {
+            backgroundColor: TextColour,
+            color: FontColour
+        }
     }
+
 
     // use state and context to monitor slider value
     return (

@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import './components/fonts/opendyslexic-regular-webfont.woff';
-import './components/fonts/opendyslexic-regular-webfont.woff2';
 import {ContextProvider} from "./components/Contexts";
 
 ReactDOM.render(

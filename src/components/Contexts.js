@@ -14,14 +14,17 @@ const TextColourContext = createContext()
 const SetTextColourContext = createContext()
 const FontColourContext = createContext()
 const SetFontColourContext = createContext()
+const NavContext = createContext()
+const SetNavContext = createContext()
 
 const ContextProvider = ({children}) => {
     const [readabilityState, setReadabilityState]= useState ("FALSE")
     const [opacityState, setOpacityState] = useState(0.5)
     const [colourState, setColourState] = useState(null)
     const [simpleState, setSimpleState] = useState(false)
-    const [textColourstate, setTextColourState] = useState("#FAFAC8")
-    const [fontColourState, setFontColourState] = useState("#000000")
+    const [textColourstate, setTextColourState] = useState(null)
+    const [fontColourState, setFontColourState] = useState(null)
+    const [navColourState, setNavColourState] = useState()
     return (
         <>
         <ReadabilityContext.Provider value={readabilityState}>
@@ -36,7 +39,11 @@ const ContextProvider = ({children}) => {
                                             <SetFontColourContext.Provider value = {setFontColourState}>
                                                 <OpacityContext.Provider value = {opacityState}>
                                                     <SetOpacityContext.Provider value = {setOpacityState}>
-                                                        {children}
+                                                        <NavContext.Provider value = {navColourState}>
+                                                            <SetNavContext.Provider value = {setNavColourState}>
+                                                                {children}
+                                                            </SetNavContext.Provider>
+                                                        </NavContext.Provider>
                                                     </SetOpacityContext.Provider>
                                                 </OpacityContext.Provider>
                                             </SetFontColourContext.Provider>
@@ -55,7 +62,7 @@ const ContextProvider = ({children}) => {
 
 export {ContextProvider, ReadabilityContext, SetReadabilityContext, OpacityContext, SetOpacityContext,
     ColourContext, SetColourContext, SimpleContext, SetSimpleContext, TextColourContext, SetTextColourContext,
-FontColourContext, SetFontColourContext}
+FontColourContext, SetFontColourContext, NavContext, SetNavContext}
 
 
 

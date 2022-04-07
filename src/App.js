@@ -24,7 +24,6 @@ function App() {
                 <FontPicker
                     apiKey="AIzaSyCwuYnbK1o5D-Y-mkOkYZF5rdTZ9yM8K_E"
                     pickerId="main"
-                    families={"Open Sans"}
                     activeFontFamily={activeFontFamily}
                     onChange={(nextFont) => setFont(nextFont.family)}
                 />
