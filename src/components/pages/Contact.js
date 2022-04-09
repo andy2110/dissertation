@@ -10,10 +10,6 @@ import {
 import {Container} from "react-bootstrap";
 
 const Contact = () => {
-        window['clear']();
-        window['stop']();
-        window['start']();
-
         const TextColour = useContext(TextColourContext)
         const FontColour = useContext(FontColourContext)
         const Readability = useContext(ReadabilityContext)

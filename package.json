@@ -16,6 +16,7 @@
     "react-bootstrap": "^2.1.2",
     "react-color": "^2.19.3",
     "react-dom": "^17.0.2",
+    "react-ratio": "^0.1.5",
     "react-router-bootstrap": "^0.26.0",
     "react-router-dom": "^6.2.1",
     "react-scripts": "^5.0.0",

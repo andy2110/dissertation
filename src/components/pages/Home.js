@@ -6,10 +6,8 @@ import meetTeam from "../images/Team-home-page-photo.jpg"
 import "../../App.css"
 import {Link} from "react-router-dom";
 import {
-    AutoContext,
     FontColourContext,
     ReadabilityContext, SetAutoContext,
-    SetFontColourContext,
     SetReadabilityContext, SetShowContext, ShowContext,
     TextColourContext
 } from "../Contexts";
@@ -23,19 +21,10 @@ const Home = (callback, deps) => {
     const Show = useContext(ShowContext)
     const SetShow = useContext(SetShowContext)
     const SetAuto = useContext(SetAutoContext)
-    window['stop']()
-    window['clear']()
-    window['start']()
 
     const pageStyle = {
         backgroundColor: TextColour,
         color: FontColour
-    }
-
-    const imgStyle = {
-        width: '100%',
-        height: undefined,
-        aspectRatio: 280/187,
     }
 
     const handleClickAuto = () => {
@@ -69,9 +58,9 @@ const Home = (callback, deps) => {
                                 src={aboutPhoto}
                                 className="card-img-top"
                                 alt={"child and female support worker on a slide"}
-                                width={280}
+                                width={'100%'}
                                 height={187}
-                                style={imgStyle}
+                                style={{aspectRatio: 187/280}}
                             />
                             <Card.Body>
                                 <Card.Title>About Time Specialist Support</Card.Title>
@@ -88,9 +77,9 @@ const Home = (callback, deps) => {
                                 src={whatWeDoPhoto}
                                 className="card-img-top"
                                 alt={"child and male support worker talking"}
-                                width={280}
+                                width={'100%'}
                                 height={187}
-                                style={imgStyle}
+                                style={{aspectRatio: 187/280}}
                             />
                             <Card.Body>
                                 <Card.Title>Contact Us</Card.Title>
@@ -107,9 +96,9 @@ const Home = (callback, deps) => {
                                 src={contactPhoto}
                                 className="card-img-top"
                                 alt={"child and female support worker"}
-                                width={280}
+                                width={'100%'}
                                 height={187}
-                                style={imgStyle}
+                                style={{aspectRatio: 187/280}}
                             />
                             <Card.Body>
                                 <Card.Title>Meet The Team</Card.Title>
@@ -126,9 +115,9 @@ const Home = (callback, deps) => {
                                 src={meetTeam}
                                 className="card-img-top"
                                 alt={"child and female support worker high five"}
-                                width={280}
+                                width={'100%'}
                                 height={187}
-                                style={imgStyle}
+                                style={{aspectRatio: 187/280}}
                             />
                             <Card.Body>
                                 <Card.Title>Work For Us</Card.Title>

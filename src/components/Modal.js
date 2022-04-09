@@ -13,6 +13,7 @@ import {
 import FontPicker from "font-picker-react";
 
 export function AccessibilityModal(callback, deps) {
+    window['start']()
     // CONTEXTS
     const SetOpacity = useContext(SetOpacityContext)
     const Opacity = useContext(OpacityContext)

@@ -1,9 +1,9 @@
 import {Card, Col, Container, Image, Row} from "react-bootstrap";
-import toriPhoto from "../images/Tori-3.png"
-import triciaPhoto from "../images/tricia-photo.jpg"
-import allyPhoto from "../images/Ally-2.jpg"
-import bradleyPhoto from "../images/bradley-photo-scaled-e1599227185514.jpg"
-import sophiePhoto from "../images/pic-of-Sophie-C-1.jpg"
+import toriPhoto from "../images/Tori-3.webp"
+import triciaPhoto from "../images/tricia-photo.webp"
+import allyPhoto from "../images/Ally-2.webp"
+import bradleyPhoto from "../images/bradley-photo.webp"
+import sophiePhoto from "../images/sophie-photo.webp"
 import {useContext, useEffect} from "react";
 import {
     FontColourContext,
@@ -14,9 +14,6 @@ import {
 } from "../Contexts";
 
 const Team = () => {
-    window['clear']();
-    window['stop']();
-    window['start']();
     const Simple = useContext(SimpleContext)
     const TextColour = useContext(TextColourContext)
     const FontColour = useContext(FontColourContext)
@@ -29,12 +26,6 @@ const Team = () => {
     const pageStyle = {
         backgroundColor: TextColour,
         color: FontColour
-    }
-
-    const imgStyle = {
-        width: '100%',
-        height: undefined,
-        aspectRatio: 280/187,
     }
 
     const handleClickAuto = () => {
@@ -76,8 +67,8 @@ const Team = () => {
                             className="card-img-top"
                             alt={"child and female support worker"}
                             width={280}
-                            height={187}
-                            style={imgStyle}
+                            height={280}
+                            style={{aspectRatio: 280/280}}
                         />
                         <Card.Body>
                             <Card.Title><h2>Tori</h2></Card.Title>
@@ -170,8 +161,8 @@ const Team = () => {
                             className="card-img-top"
                             alt={"child and female support worker"}
                             width={280}
-                            height={187}
-                            style={imgStyle}
+                            height={280}
+                            style={{aspectRatio: 280/280}}
                         />
                         <Card.Body>
                             <Card.Title><h2>Tricia</h2></Card.Title>
@@ -226,8 +217,8 @@ const Team = () => {
                             className="card-img-top"
                             alt={"child and female support worker"}
                             width={280}
-                            height={187}
-                            style={imgStyle}
+                            height={280}
+                            style={{aspectRatio: 280/280}}
                         />
                         <Card.Body>
                             <Card.Title><h2>Ally</h2></Card.Title>
@@ -297,8 +288,8 @@ const Team = () => {
                             className="card-img-top"
                             alt={"child and female support worker"}
                             width={280}
-                            height={187}
-                            style={imgStyle}
+                            height={280}
+                            style={{aspectRatio: 280/280}}
                         />
                         <Card.Body>
                             <Card.Title><h2>Bradley</h2></Card.Title>
@@ -375,8 +366,8 @@ const Team = () => {
                             className="card-img-top"
                             alt={"child and female support worker"}
                             width={280}
-                            height={187}
-                            style={imgStyle}
+                            height={280}
+                            style={{aspectRatio: 280/280}}
                         />
                         <Card.Body>
                             <Card.Title><h2>Sophie</h2></Card.Title>

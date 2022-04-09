@@ -11,10 +11,13 @@ const Footer = () => {
                 <div className="container">
                     <Row>
                         {/*Column 1*/}
+                        <h1></h1>
+                        <h2></h2>
+                        <h3></h3>
                         <Col md={3} sm={6}>
                             <h4>Time Specialist Support</h4>
                             <ul className="list-unstyled">
-                                <li>Suite 2/3, Floor 1</li>
+                                <li>Suite 13, Floor 1</li>
                                 <li>St James’s House</li>
                                 <li>Pendleton Way</li>
                                 <li>Salford M6 5FW</li>

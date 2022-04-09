@@ -12,7 +12,6 @@ import {
 } from "../Contexts";
 
 export default function Navigation ({ handleClick }) {
-
     const Opacity = useContext(OpacityContext)
     const SetOpacity = useContext(SetOpacityContext)
     const Readability = useContext(ReadabilityContext)
@@ -23,8 +22,6 @@ export default function Navigation ({ handleClick }) {
 
     const [ReadVal,SetReadVal] = useState()
     const [ReadOpacity,SetOpacityVal] = useState()
-    const [TimeStatus, SetTimeStatus] = useState(10000)
-    const [count, setCount] = useState(0)
 
     useEffect(() => {
 
@@ -38,14 +35,20 @@ export default function Navigation ({ handleClick }) {
 
     },[Readability])
 
-    function timeHome(){
-        SetTimeStatus(1000)
-        console.log(TimeStatus)
-    }
-
     const overlayStyle = {
         opacity: ReadOpacity,
         backgroundColor: Colour,
+    }
+
+    function tracker(){
+        window['stop']()
+        window['clear']()
+        window['start']()
+    }
+
+    function trackerStop(){
+        window['stop']()
+        window['clear']()
     }
 
 
@@ -61,17 +64,22 @@ export default function Navigation ({ handleClick }) {
         }
     }
 
+    const imgStyle = {
+        aspectRatio: 920/160,
+    }
+
     return (
         <>
             <Navbar bg="light" expand="lg">
                 <Container>
                     <Row className={"col-lg-10 col-xs-1"}>
                     <img
-                        src={require('../images/tss-logo.png')}
-                        width="920"
-                        height="160"
+                        src={require('../images/tss-logo.webp')}
                         className="d-inline-block align-top"
                         alt="Drawing of an employee holding hands with a child next to the words Time Specialist Support"
+                        width={'100%'}
+                        height={160}
+                        style={imgStyle}
                     />
                     </Row>
                 </Container>
@@ -93,19 +101,19 @@ export default function Navigation ({ handleClick }) {
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="me-auto">
                                 <LinkContainer to="/" style={pageStyle}>
-                                        <Nav.Link>Home</Nav.Link>
+                                        <Nav.Link onClick={tracker}>Home</Nav.Link>
                                 </LinkContainer>
                                 <LinkContainer to="/about" style={pageStyle}>
-                                    <Nav.Link onClick={timeHome}>About us</Nav.Link>
+                                    <Nav.Link onClick={tracker}>About us</Nav.Link>
                                 </LinkContainer>
                                 <LinkContainer to="/team" style={pageStyle}>
-                                    <Nav.Link>Meet the Team</Nav.Link>
+                                    <Nav.Link onClick={tracker}>Meet the Team</Nav.Link>
                                 </LinkContainer>
                                 <LinkContainer to="/vacancy" style={pageStyle}>
-                                    <Nav.Link>Vacancies</Nav.Link>
+                                    <Nav.Link onClick={trackerStop}>Vacancies</Nav.Link>
                                 </LinkContainer>
                                 <LinkContainer to="/contact" style={pageStyle}>
-                                    <Nav.Link>Contact Us</Nav.Link>
+                                    <Nav.Link onClick={tracker}>Contact Us</Nav.Link>
                                 </LinkContainer>
                                 <Nav.Link onClick={handleClick} style={pageStyle}>
                                     Accessibility
