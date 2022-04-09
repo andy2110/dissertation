@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="454e0e34-28c2-4b1e-9bde-816a21a538d6" name="Changes" comment="fixed bug with HTML elements nested within &lt;p&gt; tags">
+    <list default="true" id="454e0e34-28c2-4b1e-9bde-816a21a538d6" name="Changes" comment="reworked columns on the modal">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Contact.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -350,7 +350,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649532203036</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="reworked columns on the modal">
+      <created>1649532827930</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1649532827930</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -369,7 +376,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="added auto-user tracking to each page, still needs work" />
     <MESSAGE value="page time trigger successful" />
     <MESSAGE value="added the following:&#10;background opacity;&#10;opacity slider;&#10;basic colour selection;&#10;coloured opacity;&#10;basic modal popup box;" />
     <MESSAGE value="setup basic modal" />
@@ -394,6 +400,7 @@
     <MESSAGE value="replaced png/jpg images with webp images to improve performance" />
     <MESSAGE value="moved calls to javascript tracking functions into navbar to make code simpler and run faster, replaced old image file paths with new ones" />
     <MESSAGE value="fixed bug with HTML elements nested within &lt;p&gt; tags" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed bug with HTML elements nested within &lt;p&gt; tags" />
+    <MESSAGE value="reworked columns on the modal" />
+    <option name="LAST_COMMIT_MESSAGE" value="reworked columns on the modal" />
   </component>
 </project>
