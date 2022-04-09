@@ -5,7 +5,6 @@ import {Container} from "react-bootstrap";
 const PageNotFound = () => {
     window['clear']();
     window['stop']();
-    window['start']();
 
     const TextColour = useContext(TextColourContext)
     const FontColour = useContext(FontColourContext)

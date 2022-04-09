@@ -1,5 +1,12 @@
-import {useContext} from "react";
-import {FontColourContext, TextColourContext} from "../Contexts";
+import {useContext, useEffect} from "react";
+import {
+    FontColourContext,
+    ReadabilityContext,
+    SetAutoContext, SetReadabilityContext,
+    SetShowContext,
+    ShowContext,
+    TextColourContext
+} from "../Contexts";
 import {Container} from "react-bootstrap";
 
 const Contact = () => {
@@ -9,11 +16,37 @@ const Contact = () => {
 
         const TextColour = useContext(TextColourContext)
         const FontColour = useContext(FontColourContext)
+        const Readability = useContext(ReadabilityContext)
+        const SetReadability = useContext(SetReadabilityContext)
+        const Show = useContext(ShowContext)
+        const SetShow = useContext(SetShowContext)
+        const SetAuto = useContext(SetAutoContext)
 
         const pageStyle = {
                 backgroundColor: TextColour,
                 color: FontColour
         }
+
+    const handleClickAuto = () => {
+        SetShow(!Show)
+        SetAuto(true)
+    };
+
+    const CONTACT_TIMER = 69000
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (window.sessionStorage.getItem("timeSpent") > CONTACT_TIMER){
+                if (Readability === "FALSE"){
+                    handleClickAuto()
+                    SetReadability("TRUE")
+                    console.log("TRIGGER CONTACT PAGE")
+                }
+            }
+        }, CONTACT_TIMER);
+
+        return () => clearInterval(interval); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
+    }, [Readability])
 
     return(
         <Container style={pageStyle}>

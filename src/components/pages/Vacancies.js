@@ -7,7 +7,6 @@ const Vacancies = () => {
     const FontColour = useContext(FontColourContext)
     window['stop']()
     window['clear']()
-    window['start']()
 
     const pageStyle = {
         backgroundColor: TextColour,

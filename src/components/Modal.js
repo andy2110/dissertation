@@ -4,9 +4,10 @@ import Navbar from "../components/layout/Navbar";
 import * as React from "react";
 import RangeSlider from "./Slider";
 import {
-    OpacityContext,
+    AutoContext,
+    OpacityContext, SetAutoContext,
     SetColourContext, SetFontColourContext,
-    SetOpacityContext, SetReadabilityContext, SetSimpleContext, SetTextColourContext,
+    SetOpacityContext, SetReadabilityContext, SetShowContext, SetSimpleContext, SetTextColourContext, ShowContext,
     SimpleContext
 } from "./Contexts";
 import FontPicker from "font-picker-react";
@@ -21,6 +22,10 @@ export function AccessibilityModal(callback, deps) {
     const SetReadability = useContext(SetReadabilityContext)
     const SetTextColour = useContext(SetTextColourContext)
     const SetFontColour = useContext(SetFontColourContext)
+    const Show = useContext(ShowContext)
+    const SetShow = useContext(SetShowContext)
+    const Auto = useContext(AutoContext)
+    const SetAuto = useContext(SetAutoContext)
 
     // HANDLE OPACITY SLIDER
     const sliderValueChanged = useCallback((val) => {
@@ -74,26 +79,18 @@ export function AccessibilityModal(callback, deps) {
             </li> )
         })
     }
-
-
     // HANDLE FONTS
     const [activeFontFamily, setFont] = useState("Open Sans");
 
 
     // HANDLE MODAL LOGIC
-    const [show, setShow] = useState(false);
-    const [auto, setAuto] = useState(false);
-    const handleClickAuto = () => {
-        setShow(!show)
-        setAuto(true)
-    };
     const handleClick = () => {
-        setShow(!show)
+        SetShow(!Show)
         SetReadability("TRUE")
     };
     const handleClose = () => {
-        setShow(false)
-        setAuto(false)
+        SetShow(false)
+        SetAuto(false)
     };
 
 
@@ -123,8 +120,8 @@ export function AccessibilityModal(callback, deps) {
 
     return (
         <div>
-            <Navbar handleClick={handleClick} handleClickAuto={handleClickAuto} />
-            <Modal className="apply-font" size="lg" show={show} onHide={handleClose}>
+            <Navbar handleClick={handleClick}/>
+            <Modal className="apply-font" size="lg" show={Show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Accessibility Features</Modal.Title>
                 </Modal.Header>
@@ -134,7 +131,7 @@ export function AccessibilityModal(callback, deps) {
                             <Col>
                                 {
                                     Simple ?
-                                        auto ?
+                                        Auto ?
                                             <div>
                                                 <p>You have spent a long time on this page, use these options if they
                                                     will help your reading. Press escape or click outside the box to exit.</p>
@@ -149,7 +146,7 @@ export function AccessibilityModal(callback, deps) {
                                             </div>
 
                                     :
-                                        auto ?
+                                        Auto ?
                                             <div>
                                                 <p>We've noticed you spent a long time on this page, would you like to
                                                     activate any of the following reading comprehension features? If you

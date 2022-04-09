@@ -11,7 +11,7 @@ import {
     TextColourContext
 } from "../Contexts";
 
-export default function Navigation ({ handleClick, handleClickAuto }) {
+export default function Navigation ({ handleClick }) {
 
     const Opacity = useContext(OpacityContext)
     const SetOpacity = useContext(SetOpacityContext)
@@ -22,8 +22,9 @@ export default function Navigation ({ handleClick, handleClickAuto }) {
     const FontColour = useContext(FontColourContext)
 
     const [ReadVal,SetReadVal] = useState()
-
     const [ReadOpacity,SetOpacityVal] = useState()
+    const [TimeStatus, SetTimeStatus] = useState(10000)
+    const [count, setCount] = useState(0)
 
     useEffect(() => {
 
@@ -37,23 +38,16 @@ export default function Navigation ({ handleClick, handleClickAuto }) {
 
     },[Readability])
 
+    function timeHome(){
+        SetTimeStatus(1000)
+        console.log(TimeStatus)
+    }
+
     const overlayStyle = {
         opacity: ReadOpacity,
         backgroundColor: Colour,
     }
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            if (window.sessionStorage.getItem("timeSpent") > 5000){
-                if (Readability === "FALSE"){
-                    handleClickAuto()
-                    SetReadability("TRUE")
-                }
-            }
-        }, 5000);
-
-        return () => clearInterval(interval); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
-    }, [Readability])
 
     let pageStyle;
     if (FontColour !== "#000000"){
@@ -67,8 +61,6 @@ export default function Navigation ({ handleClick, handleClickAuto }) {
         }
     }
 
-
-    // use state and context to monitor slider value
     return (
         <>
             <Navbar bg="light" expand="lg">
@@ -76,7 +68,7 @@ export default function Navigation ({ handleClick, handleClickAuto }) {
                     <Row className={"col-lg-10 col-xs-1"}>
                     <img
                         src={require('../images/tss-logo.png')}
-                        width="756"
+                        width="920"
                         height="160"
                         className="d-inline-block align-top"
                         alt="Drawing of an employee holding hands with a child next to the words Time Specialist Support"
@@ -104,7 +96,7 @@ export default function Navigation ({ handleClick, handleClickAuto }) {
                                         <Nav.Link>Home</Nav.Link>
                                 </LinkContainer>
                                 <LinkContainer to="/about" style={pageStyle}>
-                                    <Nav.Link>About us</Nav.Link>
+                                    <Nav.Link onClick={timeHome}>About us</Nav.Link>
                                 </LinkContainer>
                                 <LinkContainer to="/team" style={pageStyle}>
                                     <Nav.Link>Meet the Team</Nav.Link>

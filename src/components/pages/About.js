@@ -1,7 +1,13 @@
 import {Container, Row, Col, Card, Image} from "react-bootstrap";
 import aboutExamplePhoto from "../images/about-page-example-photo.jpg"
-import {useContext} from "react";
-import {FontColourContext, SimpleContext, TextColourContext} from "../Contexts";
+import {useContext, useEffect} from "react";
+import {
+    FontColourContext,
+    ReadabilityContext, SetAutoContext,
+    SetReadabilityContext, SetShowContext, ShowContext,
+    SimpleContext,
+    TextColourContext
+} from "../Contexts";
 import {Link} from "react-router-dom";
 
 const About = () => {
@@ -11,11 +17,43 @@ const About = () => {
     const Simple = useContext(SimpleContext)
     const TextColour = useContext(TextColourContext)
     const FontColour = useContext(FontColourContext)
+    const Readability = useContext(ReadabilityContext)
+    const SetReadability = useContext(SetReadabilityContext)
+    const Show = useContext(ShowContext)
+    const SetShow = useContext(SetShowContext)
+    const SetAuto = useContext(SetAutoContext)
 
     const pageStyle = {
         backgroundColor: TextColour,
         color: FontColour
     }
+
+    const imgStyle = {
+        width: '100%',
+        height: undefined,
+        aspectRatio: 206/600,
+    }
+
+    const handleClickAuto = () => {
+        SetShow(!Show)
+        SetAuto(true)
+    };
+
+    const ABOUT_TIMER = 82200
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (window.sessionStorage.getItem("timeSpent") > ABOUT_TIMER){
+                if (Readability === "FALSE"){
+                    handleClickAuto()
+                    SetReadability("TRUE")
+                    console.log("TRIGGER ABOUT PAGE")
+                }
+            }
+        }, ABOUT_TIMER);
+
+        return () => clearInterval(interval); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
+    }, [Readability])
 
     return(
         <Container style={pageStyle}>
@@ -126,7 +164,9 @@ const About = () => {
                             src={aboutExamplePhoto}
                             className="card-img-top"
                             alt={"child and female support worker"}
-                            fluid
+                            height={600}
+                            width={206}
+                            style={imgStyle}
                         />
                         <Card.Body>
                             <Card.Title>What do our sessions look like?</Card.Title>

@@ -4,8 +4,14 @@ import triciaPhoto from "../images/tricia-photo.jpg"
 import allyPhoto from "../images/Ally-2.jpg"
 import bradleyPhoto from "../images/bradley-photo-scaled-e1599227185514.jpg"
 import sophiePhoto from "../images/pic-of-Sophie-C-1.jpg"
-import {useContext} from "react";
-import {FontColourContext, SimpleContext, TextColourContext} from "../Contexts";
+import {useContext, useEffect} from "react";
+import {
+    FontColourContext,
+    ReadabilityContext, SetAutoContext,
+    SetReadabilityContext, SetShowContext, ShowContext,
+    SimpleContext,
+    TextColourContext
+} from "../Contexts";
 
 const Team = () => {
     window['clear']();
@@ -14,11 +20,43 @@ const Team = () => {
     const Simple = useContext(SimpleContext)
     const TextColour = useContext(TextColourContext)
     const FontColour = useContext(FontColourContext)
+    const Readability = useContext(ReadabilityContext)
+    const SetReadability = useContext(SetReadabilityContext)
+    const Show = useContext(ShowContext)
+    const SetShow = useContext(SetShowContext)
+    const SetAuto = useContext(SetAutoContext)
 
     const pageStyle = {
         backgroundColor: TextColour,
         color: FontColour
     }
+
+    const imgStyle = {
+        width: '100%',
+        height: undefined,
+        aspectRatio: 280/187,
+    }
+
+    const handleClickAuto = () => {
+        SetShow(!Show)
+        SetAuto(true)
+    };
+
+    const CONTACT_TIMER = 233400
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (window.sessionStorage.getItem("timeSpent") > CONTACT_TIMER){
+                if (Readability === "FALSE"){
+                    handleClickAuto()
+                    SetReadability("TRUE")
+                    console.log("TRIGGER TEAM PAGE")
+                }
+            }
+        }, CONTACT_TIMER);
+
+        return () => clearInterval(interval); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
+    }, [Readability])
 
     return(
         <Container>
@@ -37,12 +75,13 @@ const Team = () => {
                             src={toriPhoto}
                             className="card-img-top"
                             alt={"child and female support worker"}
-                            height={280}
-                            width={187}
+                            width={280}
+                            height={187}
+                            style={imgStyle}
                         />
                         <Card.Body>
                             <Card.Title><h2>Tori</h2></Card.Title>
-                            <Card.Text>
+                            <Card.Text as="div">
                                 {
                                     Simple ?
                                         <>
@@ -54,28 +93,32 @@ const Team = () => {
                                                 She had the idea to set up the business when she was at university.
                                             </p>
                                             <blockquote className="blockquote mb-0">
-                                                <p>“After putting up an advert for babysitting in a specialist nursery where I was doing
+                                                “After putting up an advert for babysitting in a specialist nursery where I was doing
                                                     a clinical placement I was overwhelmed at how much families seemed desperate for
-                                                    this kind of support. </p>
-                                                <p> It was then I realised the importance of just having a couple
-                                                    of hours off to do normal things like shopping or to clean the bath.”</p>
+                                                    this kind of support.
+                                            </blockquote>
+                                            <blockquote className="blockquote mb-0">
+                                                It was then I realised the importance of just having a couple
+                                                of hours off to do normal things like shopping or to clean the bath.”
                                             </blockquote>
                                             <br/>
                                             <p>
                                                 She set up a business called Time Babysitting in 2008 and changed the
                                                 name to Time Specialist Support in 2012 because it had grown bigger.
                                             </p>
+                                            <br/>
                                             <blockquote className="blockquote mb-0">
-                                                <p>“We began to recruit more and more older children, and families wanted us to take
-                                                    their children out rather than staying in. </p>
-                                                <p> Our support workers are much more
-                                                    interactive and hands on than the title babysitter suggested”</p>
+                                                “We began to recruit more and more older children, and families wanted us to take
+                                                    their children out rather than staying in.
+                                            </blockquote>
+                                            <blockquote className="blockquote mb-0">
+                                            Our support workers are much more
+                                                interactive and hands on than the title babysitter suggested.”
                                             </blockquote>
                                             <br/>
                                             <p>
                                                 Tori is also the co-editor of AuKids Magazine (www.aukids.co.uk).
                                             </p>
-                                            <p>
                                                 In her free time, Tori likes to:
                                                 <ul>
                                                     <li>Spend time with her son Remy (and their two dogs Tilly and Ted</li>
@@ -83,7 +126,6 @@ const Team = () => {
                                                     <li>Play Tennis</li>
                                                     <li>Sing in a weekly group</li>
                                                 </ul>
-                                            </p>
                                         </>
                                         :
                                         <>
@@ -127,12 +169,13 @@ const Team = () => {
                             src={triciaPhoto}
                             className="card-img-top"
                             alt={"child and female support worker"}
-                            height={280}
-                            width={187}
+                            width={280}
+                            height={187}
+                            style={imgStyle}
                         />
                         <Card.Body>
                             <Card.Title><h2>Tricia</h2></Card.Title>
-                            <Card.Text>
+                            <Card.Text as="div">
                                 {
                                     Simple ?
                                         <>
@@ -140,6 +183,8 @@ const Team = () => {
                                                 Tricia is in charge of collecting money for the company and making sure
                                                 our workers are paid. Tricia works from home. Before working for Time,
                                                 Tricia:
+
+                                            </p>
                                                 <ul>
                                                     <li>Helped her husband run his own business</li>
                                                     <li>Owned her own card shop</li>
@@ -150,6 +195,7 @@ const Team = () => {
                                                     <li>Play golf</li>
                                                     <li>Play bridge</li>
                                                 </ul>
+                                            <p>
                                                 Tricia is also Tori's mum!
                                             </p>
                                         </>
@@ -179,12 +225,13 @@ const Team = () => {
                             src={allyPhoto}
                             className="card-img-top"
                             alt={"child and female support worker"}
-                            height={280}
-                            width={187}
+                            width={280}
+                            height={187}
+                            style={imgStyle}
                         />
                         <Card.Body>
                             <Card.Title><h2>Ally</h2></Card.Title>
-                            <Card.Text>
+                            <Card.Text as="div">
                                 {
                                     Simple ?
                                         <>
@@ -197,28 +244,26 @@ const Team = () => {
                                                 She is very experienced. She has worked for the Seashell Trust and the NHS.
                                             </p>
                                             <blockquote className="blockquote mb-0">
-                                                <p>“When the chance arose to work for Time I found it was an opportunity too good
-                                                    to pass up. </p>
+                                                “When the chance arose to work for Time I found it was an opportunity too good
+                                                    to pass up.
                                             </blockquote>
                                             <br/>
                                             <blockquote className="blockquote mb-0">
-                                                <p>We are a forward thinking company that is dedicated to the welfare
-                                                    of the families entrusted to us. </p>
+                                                We are a forward thinking company that is dedicated to the welfare
+                                                    of the families entrusted to us.
                                                 </blockquote>
                                             <br/>
                                                 <blockquote className="blockquote mb-0">
-                                                <p> We constantly strive to improve our service
-                                                    and work within a dedicated team to ensure this happens.”</p>
+                                                We constantly strive to improve our service
+                                                    and work within a dedicated team to ensure this happens.”
                                             </blockquote>
                                             <br/>
-                                            <p>
                                                 When she is not working, Ally enjoys:
                                                 <ul>
                                                     <li>Walking her dog</li>
                                                     <li>Camping (but only when the weather is nice!)</li>
                                                     <li>Cooking</li>
                                                 </ul>
-                                            </p>
                                         </>
                                         :
                                         <>
@@ -228,10 +273,10 @@ const Team = () => {
                                     broad spectrum of experience ranging from working for the  Seashell Trust to the
                                     NHS.</p>
                                 <blockquote className="blockquote mb-0">
-                                    <p>“When the chance arose to work for Time I found it was an opportunity too good
+                                    “When the chance arose to work for Time I found it was an opportunity too good
                                         to pass up, we are a forward thinking company that is dedicated to the welfare
                                         of the families entrusted to us. We constantly strive to improve our service
-                                        and work within a dedicated team to ensure this happens”</p>
+                                        and work within a dedicated team to ensure this happens”
                                 </blockquote>
                                 <br/>
                                 <p>In her spare time Ally enjoys cooking, long walks with the dog and camping, although
@@ -251,12 +296,13 @@ const Team = () => {
                             src={bradleyPhoto}
                             className="card-img-top"
                             alt={"child and female support worker"}
-                            height={280}
-                            width={187}
+                            width={280}
+                            height={187}
+                            style={imgStyle}
                         />
                         <Card.Body>
                             <Card.Title><h2>Bradley</h2></Card.Title>
-                            <Card.Text>
+                            <Card.Text as="div">
                                 {
                                     Simple ?
                                         <>
@@ -265,27 +311,26 @@ const Team = () => {
                                                 later became the Recruitment Coordinator, so he is in charge of hiring new talent!
                                             </p>
                                             <blockquote className="blockquote mb-0">
-                                                <p>“I initially worked for Time on a part-time basis and eventually had to find
-                                                    full-time work. </p>
+                                                “I initially worked for Time on a part-time basis and eventually had to find
+                                                    full-time work.
                                             </blockquote>
                                             <br/>
                                             <blockquote className="blockquote mb-0">
-                                                <p>But after almost 2 years away, in a twist of fate, the same
+                                                But after almost 2 years away, in a twist of fate, the same
                                                     recruitment role became available on a full-time basis and I jumped at the chance
-                                                    to work for this great company again.</p>
+                                                    to work for this great company again.
                                             </blockquote>
                                             <br/>
                                             <blockquote className="blockquote mb-0">
-                                                <p>Having shadowed sessions, I’ve witnessed the hugely positive impact the support
-                                                    has on our service users and their families. </p>
+                                                Having shadowed sessions, I’ve witnessed the hugely positive impact the support
+                                                    has on our service users and their families.
                                             </blockquote>
                                             <br/>
                                             <blockquote className="blockquote mb-0">
-                                                <p>To be part of this in some
-                                                    way gives me a great sense of satisfaction at the end of each day.”</p>
+                                                To be part of this in some
+                                                    way gives me a great sense of satisfaction at the end of each day.”
                                             </blockquote>
                                             <br/>
-                                            <p>
                                                 Bradley has a degree in Biology and in his spare time he:
                                                 <ul>
                                                     <li>Plays guitar</li>
@@ -294,7 +339,6 @@ const Team = () => {
                                                     <li>Cycles</li>
                                                     <li>Hikes</li>
                                                 </ul>
-                                            </p>
                                         </>
                                         :
                                         <>
@@ -330,12 +374,13 @@ const Team = () => {
                             src={sophiePhoto}
                             className="card-img-top"
                             alt={"child and female support worker"}
-                            height={280}
-                            width={187}
+                            width={280}
+                            height={187}
+                            style={imgStyle}
                         />
                         <Card.Body>
                             <Card.Title><h2>Sophie</h2></Card.Title>
-                            <Card.Text>
+                            <Card.Text as="div">
                                 {
                                     Simple ?
                                         <>
@@ -348,51 +393,43 @@ const Team = () => {
                                                 Sophie graduated and became a Supervisor. She later became Assistant Manager.
                                             </p>
                                             <blockquote className="blockquote mb-0">
-                                                <p>
                                                     “I was excited when the opportunity arose for me to join the core team at Time.
                                                     I love the fact that my new role still enables me to do support work as I love
                                                     going out in to the community meeting and building relationships with Time’s
                                                     service users and their families.
-                                                </p>
                                             </blockquote>
                                             <br/>
                                             <blockquote className="blockquote mb-0">
-                                                <p>
                                                     Support work is more rewarding than I ever
                                                     could have imagined and working with children has taught me that it really is
                                                     the little things in life that make all the difference!
-                                                </p>
+
                                             </blockquote>
                                             <br/>
                                             <blockquote className="blockquote mb-0">
-                                                <p>
                                                     I like the fact I had
                                                     the chance to meet a lot of our families as a support worker first and was able
                                                     to develop some close relationships with those that I did meet, this is
                                                     definitely something that I think will assist me in my new role as Assistant
-                                                    Manager.” </p>
+                                                    Manager.”
                                             </blockquote>
                                             <br/>
-                                            <p>
                                                 When Sophie isn’t working she enjoys:
                                                 <ul>
                                                     <li>Going to the cinema</li>
                                                     <li>Going to the gym</li>
                                                     <li>Sunny days out</li>
                                                 </ul>
-                                            </p>
-
                                         </>
                                         :
                                         <>
-
                                 <p>Sophie started working for Time Specialist in May 2018 as a support worker whilst
                                     she was studying Psychology and Criminology at university. Sophie has since
                                     graduated from university and joined the core team- starting out as a Field
                                     Supervisor and then moved into the position of Assistant Manager. Sophie still
                                     continues to support our service users. </p>
                                 <blockquote className="blockquote mb-0">
-                                    <p>“I was excited when the opportunity arose for me to join the core team at Time.
+                                    “I was excited when the opportunity arose for me to join the core team at Time.
                                         I love the fact that my new role still enables me to do support work as I love
                                         going out in to the community meeting and building relationships with Time’s
                                         service users and their families. Support work is more rewarding than I ever
@@ -401,7 +438,7 @@ const Team = () => {
                                         the chance to meet a lot of our families as a support worker first and was able
                                         to develop some close relationships with those that I did meet, this is
                                         definitely something that I think will assist me in my new role as Field
-                                        Supervisor.” </p>
+                                        Supervisor.”
                                 </blockquote>
                                 <br/>
                                 <p>When Sophie isn’t working she loves to spend time socialising with her family and
