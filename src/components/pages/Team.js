@@ -37,7 +37,8 @@ const Team = () => {
                             src={toriPhoto}
                             className="card-img-top"
                             alt={"child and female support worker"}
-                            fluid
+                            height={280}
+                            width={187}
                         />
                         <Card.Body>
                             <Card.Title><h2>Tori</h2></Card.Title>
@@ -126,7 +127,8 @@ const Team = () => {
                             src={triciaPhoto}
                             className="card-img-top"
                             alt={"child and female support worker"}
-                            fluid
+                            height={280}
+                            width={187}
                         />
                         <Card.Body>
                             <Card.Title><h2>Tricia</h2></Card.Title>
@@ -177,7 +179,8 @@ const Team = () => {
                             src={allyPhoto}
                             className="card-img-top"
                             alt={"child and female support worker"}
-                            fluid
+                            height={280}
+                            width={187}
                         />
                         <Card.Body>
                             <Card.Title><h2>Ally</h2></Card.Title>
@@ -248,7 +251,8 @@ const Team = () => {
                             src={bradleyPhoto}
                             className="card-img-top"
                             alt={"child and female support worker"}
-                            fluid
+                            height={280}
+                            width={187}
                         />
                         <Card.Body>
                             <Card.Title><h2>Bradley</h2></Card.Title>
@@ -326,7 +330,8 @@ const Team = () => {
                             src={sophiePhoto}
                             className="card-img-top"
                             alt={"child and female support worker"}
-                            fluid
+                            height={280}
+                            width={187}
                         />
                         <Card.Body>
                             <Card.Title><h2>Sophie</h2></Card.Title>

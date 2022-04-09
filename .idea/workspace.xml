@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="454e0e34-28c2-4b1e-9bde-816a21a538d6" name="Changes" comment="fixed minor error + changed staff content">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Vacancies.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Vacancies.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Team.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Team.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +80,7 @@
       <workItem from="1648559441634" duration="1764000" />
       <workItem from="1648566977987" duration="41699000" />
       <workItem from="1649075466049" duration="47224000" />
+      <workItem from="1649511200337" duration="1190000" />
     </task>
     <task id="LOCAL-00001" summary="testing commit + added pages directory">
       <created>1645205223205</created>

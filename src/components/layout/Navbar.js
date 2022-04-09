@@ -76,7 +76,7 @@ export default function Navigation ({ handleClick, handleClickAuto }) {
                     <Row className={"col-lg-10 col-xs-1"}>
                     <img
                         src={require('../images/tss-logo.png')}
-                        width="920"
+                        width="756"
                         height="160"
                         className="d-inline-block align-top"
                         alt="Drawing of an employee holding hands with a child next to the words Time Specialist Support"

@@ -48,7 +48,8 @@ const Home = (callback, deps) => {
                                 src={whatWeDoPhoto}
                                 className="card-img-top"
                                 alt={"child and male support worker"}
-                                fluid
+                                height={280}
+                                width={187}
                             />
                             <Card.Body>
                                 <Card.Title>Contact Us</Card.Title>
@@ -65,7 +66,9 @@ const Home = (callback, deps) => {
                                 src={contactPhoto}
                                 className="card-img-top"
                                 alt={"child and male support worker"}
-                                fluid
+                                height={280}
+                                width={187}
+
                             />
                             <Card.Body>
                                 <Card.Title>Meet The Team</Card.Title>
@@ -82,7 +85,8 @@ const Home = (callback, deps) => {
                                 src={meetTeam}
                                 className="card-img-top"
                                 alt={"child and male support worker"}
-                                fluid
+                                height={280}
+                                width={187}
                             />
                             <Card.Body>
                                 <Card.Title>Work For Us</Card.Title>
