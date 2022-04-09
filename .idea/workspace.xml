@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="454e0e34-28c2-4b1e-9bde-816a21a538d6" name="Changes" comment="fixed minor error + changed staff content">
+    <list default="true" id="454e0e34-28c2-4b1e-9bde-816a21a538d6" name="Changes" comment="tracking added to all pages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Contexts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contexts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/About.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Contact.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/PageNotFound.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/PageNotFound.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Team.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Team.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -314,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649342050691</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="tracking added to all pages">
+      <created>1649524767962</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1649524767962</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,7 +333,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="edit to default element for routing" />
     <MESSAGE value="changed temp content" />
     <MESSAGE value="changed navbar highlight url from /home to /" />
     <MESSAGE value="reformatted content" />
@@ -358,6 +357,7 @@
     <MESSAGE value="fixed console error with google font picker" />
     <MESSAGE value="created contact + vacancy page, fixed navbar font colour/background" />
     <MESSAGE value="fixed minor error + changed staff content" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed minor error + changed staff content" />
+    <MESSAGE value="tracking added to all pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="tracking added to all pages" />
   </component>
 </project>

@@ -63,12 +63,12 @@ const Home = (callback, deps) => {
             <Container>
                 <div>
                 <Row>
-                    <Col xxl={3} xl={4} lg={5} md={6} sm={10} xs={10}>
+                    <Col xxl={3} xl={4} lg={6} md={8} sm={10} xs={10}>
                         <Card className="mb-3" style={pageStyle}>
                             <Image
                                 src={aboutPhoto}
                                 className="card-img-top"
-                                alt={"child and female support worker"}
+                                alt={"child and female support worker on a slide"}
                                 width={280}
                                 height={187}
                                 style={imgStyle}
@@ -82,12 +82,12 @@ const Home = (callback, deps) => {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col xxl={3} xl={4} lg={5} md={6} sm={10} xs={10}>
+                    <Col xxl={3} xl={4} lg={6} md={8} sm={10} xs={10}>
                         <Card className="mb-3" style={pageStyle}>
                             <Image
                                 src={whatWeDoPhoto}
                                 className="card-img-top"
-                                alt={"child and male support worker"}
+                                alt={"child and male support worker talking"}
                                 width={280}
                                 height={187}
                                 style={imgStyle}
@@ -101,12 +101,12 @@ const Home = (callback, deps) => {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col xxl={3} xl={4} lg={5} md={6} sm={10} xs={10}>
+                    <Col xxl={3} xl={4} lg={6} md={8} sm={10} xs={10}>
                         <Card className="mb-3" style={pageStyle}>
                             <Image
                                 src={contactPhoto}
                                 className="card-img-top"
-                                alt={"child and male support worker"}
+                                alt={"child and female support worker"}
                                 width={280}
                                 height={187}
                                 style={imgStyle}
@@ -120,12 +120,12 @@ const Home = (callback, deps) => {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col xxl={3} xl={4} lg={5} md={6} sm={10} xs={10}>
+                    <Col xxl={3} xl={4} lg={6} md={8} sm={10} xs={10}>
                         <Card className="mb-3" style={pageStyle}>
                             <Image
                                 src={meetTeam}
                                 className="card-img-top"
-                                alt={"child and male support worker"}
+                                alt={"child and female support worker high five"}
                                 width={280}
                                 height={187}
                                 style={imgStyle}
