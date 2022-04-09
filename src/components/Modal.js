@@ -145,7 +145,6 @@ export function AccessibilityModal(callback, deps) {
                                                     click outside the box to exit.</p>
                                                 <p>If you want more settings to change, please email us.</p>
                                             </div>
-
                                     :
                                         Auto ?
                                             <div>
@@ -187,6 +186,13 @@ export function AccessibilityModal(callback, deps) {
                                                 adjust how bright or dark you want the overlay to be.</p>
                                         </div>
                                 }
+                                <h6>Overlay Colour</h6>
+                            <div id='toolbox' style={{backgroundColor: "WhiteSmoke"}}>
+                                { renderButtons(colours) }
+                            </div>
+                            <br/>
+                            <RangeSlider {...sliderProps} />
+                            <br/>
                             </Col>
                             <Col xs={12} s={8} md={4}>
                                 <h4>Simplified Text</h4>
@@ -201,6 +207,8 @@ export function AccessibilityModal(callback, deps) {
                                                 below. It will break up larger pieces of text, and use simpler language overall.</p>
                                         </div>
                                 }
+                                <Button onClick={enableSimple}>{buttonText} Simplified Text</Button>
+                                <br/><br/>
                             </Col>
                             <Col xs={12} s={8} md={4}>
                                 <h4>Font Options</h4>
@@ -216,24 +224,6 @@ export function AccessibilityModal(callback, deps) {
                                                 content is displayed.</p>
                                         </div>
                                 }
-                            </Col>
-                        </Row>
-                        <hr/>
-                        <Row>
-                            <Col xs={12} s={8} md={4}>
-                                <h6>Overlay Colour</h6>
-                                <div id='toolbox' style={{backgroundColor: "WhiteSmoke"}}>
-                                    { renderButtons(colours) }
-                                </div>
-                                <br/>
-                                <RangeSlider {...sliderProps} />
-                            </Col>
-                            <Col xs={12} s={8} md={4}>
-                                <div>
-                                    <Button onClick={enableSimple}>{buttonText} Simplified Text</Button>
-                                </div>
-                            </Col>
-                            <Col xs={12} s={8} md={4}>
                                 <h6>Background Colour</h6>
                                 <div id='toolbox' style={{backgroundColor: "WhiteSmoke"}}>
                                     { renderButtonsFont(coloursText) }
