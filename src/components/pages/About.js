@@ -9,11 +9,11 @@ import {
     TextColourContext
 } from "../Contexts";
 import {Link} from "react-router-dom";
+import AboutSimple from "../simplePages/AboutSimple";
+import Navbar from "../layout/Navbar";
+import * as React from "react";
 
 const About = () => {
-    window['clear']();
-    window['stop']();
-    window['start'](3000);
     const Simple = useContext(SimpleContext)
     const TextColour = useContext(TextColourContext)
     const FontColour = useContext(FontColourContext)
@@ -26,12 +26,6 @@ const About = () => {
     const pageStyle = {
         backgroundColor: TextColour,
         color: FontColour
-    }
-
-    const imgStyle = {
-        width: '100%',
-        height: undefined,
-        aspectRatio: 206/600,
     }
 
     const handleClickAuto = () => {
@@ -93,7 +87,8 @@ const About = () => {
                             </p>
                             <p>
                                 If your child is uncertain about the process, we can provide social stories and visual
-                                resources to help explain it to them and make sure that they are comfortable about having
+                                resources to help explain it to them and make sure that they are comfortable about
+                                having
                                 sessions with their support worker.
                             </p>
                             <p>
@@ -101,61 +96,7 @@ const About = () => {
                             </p>
                         </>
                         :
-                        <>
-                            <p>
-                                We are a company that helps people with autism and their families.
-                            </p>
-                            <p>
-                                We know what it is like to have a child with autism. Your child could be:
-                                <ul>
-                                    <li>Fussy</li>
-                                    <li>Easily overwhelmed</li>
-                                    <li>Like different things to other children</li>
-                                    <li>Be difficult to manage</li>
-                                </ul>
-                                Our aim is to help you manage this.
-                            </p>
-
-                            <h3>What We Do</h3>
-                            <p>We offer a service where a support worker can come with you or your child to different
-                                activities. This can give you more free time to relax or do chores.</p>
-                            <p>
-                                When you start with us, we will visit your home to discuss:
-                                <ul>
-                                    <li>What your child needs</li>
-                                    <li>What you need</li>
-                                </ul>
-                                Once we have spoken to you, we will find a support worker to suit your child. We will
-                                look at:
-                                <ul>
-                                    <li>Shared interests</li>
-                                    <li>Availability</li>
-                                    <li>Gender</li>
-                                </ul>
-                            </p>
-                            <p>
-                                All of our support workers have been DBS-checked, training about autism, and know how to
-                                support autistic people.
-                            </p>
-                            <p>
-                                ‘DBS’ means Disclosure and Barring Service. This will ensure that our support workers
-                                are able to safely work with you and your child.
-                            </p>
-                            <p>
-                                When a support worker is new, they will practice sessions with other support workers
-                                before they can work alone.
-                            </p>
-                            <p>
-                                This means your child will always be cared for safely.
-                            </p>
-                            <p>
-                                If your child is unsure about anything, we can explain it to them visually or with
-                                stories. This will make them more comfortable about being with a support worker.
-                            </p>
-                            <p>
-                                Please <Link to='/contact'>get in touch</Link> today to find out more!
-                            </p>
-                        </>
+                        <AboutSimple/>
                     }
                 </Col>
                 <Col>
@@ -166,7 +107,7 @@ const About = () => {
                             alt={"child and female support worker"}
                             height={600}
                             width={206}
-                            style={imgStyle}
+                            style={{aspectRatio: 600/206}}
                         />
                         <Card.Body>
                             <Card.Title>What do our sessions look like?</Card.Title>
