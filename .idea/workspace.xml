@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="454e0e34-28c2-4b1e-9bde-816a21a538d6" name="Changes" comment="replacement of png/jpg files with webp files to improve performance">
+    <list default="true" id="454e0e34-28c2-4b1e-9bde-816a21a538d6" name="Changes" comment="uninstalled unused packages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Home.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -379,7 +378,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649533601233</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="uninstalled unused packages">
+      <created>1649534393284</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1649534393284</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,7 +404,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="setup basic modal" />
     <MESSAGE value="moved slider + colour selector into modal, not functional yet" />
     <MESSAGE value="added slider/opacity functionality in modal" />
     <MESSAGE value="modal triggers on tracking timer, added accessibility button to navbar" />
@@ -423,6 +428,7 @@
     <MESSAGE value="reworked columns on the modal" />
     <MESSAGE value="fixed another &lt;p&gt; nesting bug" />
     <MESSAGE value="replacement of png/jpg files with webp files to improve performance" />
-    <option name="LAST_COMMIT_MESSAGE" value="replacement of png/jpg files with webp files to improve performance" />
+    <MESSAGE value="uninstalled unused packages" />
+    <option name="LAST_COMMIT_MESSAGE" value="uninstalled unused packages" />
   </component>
 </project>

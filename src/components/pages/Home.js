@@ -1,5 +1,5 @@
 import {Card, Container, Image, Row, Col} from "react-bootstrap";
-import aboutPhoto from "../images/About-TSS-Home-page-photo.webp"
+import aboutPhoto from "../images/About-TSS-Home-page-photo.avif"
 import whatWeDoPhoto from "../images/Contact-home-page-photo.webp"
 import contactPhoto from "../images/What-We-Do-home-page-photo.webp"
 import meetTeam from "../images/Team-home-page-photo.webp"
