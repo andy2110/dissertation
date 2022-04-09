@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="454e0e34-28c2-4b1e-9bde-816a21a538d6" name="Changes" comment="fixed another &lt;p&gt; nesting bug">
-      <change afterPath="$PROJECT_DIR$/src/components/images/About-TSS-Home-page-photo.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/images/Contact-home-page-photo.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/images/about-page-example-photo.webp" afterDir="false" />
+    <list default="true" id="454e0e34-28c2-4b1e-9bde-816a21a538d6" name="Changes" comment="replacement of png/jpg files with webp files to improve performance">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/images/About-TSS-home-page-photo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/images/Contact-home-page-photo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/images/Team-home-page-photo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/images/What-We-Do-home-page-photo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/images/about-page-example-photo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/About.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -373,7 +365,21 @@
       <option name="project" value="LOCAL" />
       <updated>1649532911834</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="replacement of png/jpg files with webp files to improve performance">
+      <created>1649533525476</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1649533525476</updated>
+    </task>
+    <task id="LOCAL-00042" summary="replacement of png/jpg files with webp files to improve performance">
+      <created>1649533601233</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1649533601233</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -392,7 +398,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="added the following:&#10;background opacity;&#10;opacity slider;&#10;basic colour selection;&#10;coloured opacity;&#10;basic modal popup box;" />
     <MESSAGE value="setup basic modal" />
     <MESSAGE value="moved slider + colour selector into modal, not functional yet" />
     <MESSAGE value="added slider/opacity functionality in modal" />
@@ -417,6 +422,7 @@
     <MESSAGE value="fixed bug with HTML elements nested within &lt;p&gt; tags" />
     <MESSAGE value="reworked columns on the modal" />
     <MESSAGE value="fixed another &lt;p&gt; nesting bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed another &lt;p&gt; nesting bug" />
+    <MESSAGE value="replacement of png/jpg files with webp files to improve performance" />
+    <option name="LAST_COMMIT_MESSAGE" value="replacement of png/jpg files with webp files to improve performance" />
   </component>
 </project>
