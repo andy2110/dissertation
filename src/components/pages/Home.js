@@ -1,8 +1,8 @@
 import {Card, Container, Image, Row, Col} from "react-bootstrap";
-import aboutPhoto from "../images/About-TSS-home-page-photo.jpg"
-import whatWeDoPhoto from "../images/Contact-home-page-photo.jpg"
-import contactPhoto from "../images/What-We-Do-home-page-photo.jpg"
-import meetTeam from "../images/Team-home-page-photo.jpg"
+import aboutPhoto from "../images/About-TSS-Home-page-photo.webp"
+import whatWeDoPhoto from "../images/Contact-home-page-photo.webp"
+import contactPhoto from "../images/What-We-Do-home-page-photo.webp"
+import meetTeam from "../images/Team-home-page-photo.webp"
 import "../../App.css"
 import {Link} from "react-router-dom";
 import {

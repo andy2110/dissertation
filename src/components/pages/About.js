@@ -1,5 +1,5 @@
 import {Container, Row, Col, Card, Image} from "react-bootstrap";
-import aboutExamplePhoto from "../images/about-page-example-photo.jpg"
+import aboutExamplePhoto from "../images/about-page-example-photo.webp"
 import {useContext, useEffect} from "react";
 import {
     FontColourContext,
@@ -105,9 +105,9 @@ const About = () => {
                             src={aboutExamplePhoto}
                             className="card-img-top"
                             alt={"child and female support worker"}
-                            height={600}
-                            width={206}
-                            style={{aspectRatio: 600/206}}
+                            height={435}
+                            width={300}
+                            style={{aspectRatio: 435/300}}
                         />
                         <Card.Body>
                             <Card.Title>What do our sessions look like?</Card.Title>
