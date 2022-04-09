@@ -1,4 +1,4 @@
-import {Container, Navbar, Nav, NavDropdown, Row, Col, Button} from "react-bootstrap";
+import {Container, Navbar, Nav, Row, Col} from "react-bootstrap";
 import { LinkContainer } from 'react-router-bootstrap';
 import * as React from "react";
 import { useContext, useEffect, useState } from "react";
@@ -6,16 +6,12 @@ import {
     ColourContext, FontColourContext,
     OpacityContext,
     ReadabilityContext,
-    SetOpacityContext,
-    SetReadabilityContext,
     TextColourContext
 } from "../Contexts";
 
 export default function Navigation ({ handleClick }) {
     const Opacity = useContext(OpacityContext)
-    const SetOpacity = useContext(SetOpacityContext)
     const Readability = useContext(ReadabilityContext)
-    const SetReadability = useContext(SetReadabilityContext)
     const Colour = useContext(ColourContext)
     const TextColour = useContext(TextColourContext)
     const FontColour = useContext(FontColourContext)

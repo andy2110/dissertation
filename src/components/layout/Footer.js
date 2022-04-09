@@ -1,6 +1,6 @@
 import React from "react";
 import styled from 'styled-components'
-import {Row, Col, Container} from "react-bootstrap";
+import {Row, Col} from "react-bootstrap";
 import { SocialIcon } from 'react-social-icons';
 import {Link} from "react-router-dom";
 

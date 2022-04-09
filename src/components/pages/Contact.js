@@ -36,7 +36,6 @@ const Contact = () => {
                 if (Readability === "FALSE"){
                     handleClickAuto()
                     SetReadability("TRUE")
-                    console.log("TRIGGER CONTACT PAGE")
                 }
             }
         }, CONTACT_TIMER);

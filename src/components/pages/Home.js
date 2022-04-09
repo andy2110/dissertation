@@ -40,7 +40,6 @@ const Home = (callback, deps) => {
                 if (Readability === "FALSE"){
                     handleClickAuto()
                     SetReadability("TRUE")
-                    console.log("TRIGGER HOME PAGE")
                 }
             }
         }, HOME_TIMER);

@@ -41,7 +41,6 @@ const Team = () => {
                 if (Readability === "FALSE"){
                     handleClickAuto()
                     SetReadability("TRUE")
-                    console.log("TRIGGER TEAM PAGE")
                 }
             }
         }, CONTACT_TIMER);
