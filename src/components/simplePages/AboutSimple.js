@@ -16,7 +16,6 @@ const AboutSimple = () => {
 
     return(
         <div style={pageStyle}>
-                <p>
                     We help families with autistic children. We know what it is like to have a child with autism. Your child could be:
                     <ul>
                         <li>Fussy</li>
@@ -25,12 +24,10 @@ const AboutSimple = () => {
                         <li>Be difficult to manage</li>
                     </ul>
                     Our aim is to help you manage this.
-                </p>
 
                 <h3>What We Do</h3>
                 <p>We offer a service where a support worker can come with you or your child to different
                     activities. This can give you more free time to relax or do chores.</p>
-                <p>
                     When you start with us, we will visit your home to discuss:
                     <ul>
                         <li>What your child needs</li>
@@ -43,7 +40,6 @@ const AboutSimple = () => {
                         <li>Availability</li>
                         <li>Gender</li>
                     </ul>
-                </p>
                 <p>
                     All of our support workers have been DBS-checked, training about autism, and know how to
                     support autistic people.
