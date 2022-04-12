@@ -195,7 +195,7 @@ export function AccessibilityModal(callback, deps) {
                             <br/>
                             </Col>
                             <Col xs={12} s={8} md={4}>
-                                <h4>Simplified Text</h4>
+                                <h4>Simplified Text & Layout</h4>
                                 {
                                     Simple ?
                                         <div>
