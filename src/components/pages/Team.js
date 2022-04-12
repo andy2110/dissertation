@@ -111,7 +111,7 @@ const Team = () => {
                                             </p>
                                                 In her free time, Tori likes to:
                                                 <ul>
-                                                    <li>Spend time with her son Remy (and their two dogs Tilly and Ted</li>
+                                                    <li>Spend time with her son Remy (and their two dogs Tilly and Ted)</li>
                                                     <li>Travel</li>
                                                     <li>Play Tennis</li>
                                                     <li>Sing in a weekly group</li>
