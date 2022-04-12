@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="454e0e34-28c2-4b1e-9bde-816a21a538d6" name="Changes" comment="uninstalled unused packages">
+    <list default="true" id="454e0e34-28c2-4b1e-9bde-816a21a538d6" name="Changes" comment="removed console logging">
+      <change afterPath="$PROJECT_DIR$/src/components/checkFocus.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Staff.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +87,8 @@
       <workItem from="1648559441634" duration="1764000" />
       <workItem from="1648566977987" duration="41699000" />
       <workItem from="1649075466049" duration="47224000" />
+      <workItem from="1649600976915" duration="5239000" />
+      <workItem from="1649773966098" duration="471000" />
     </task>
     <task id="LOCAL-00001" summary="testing commit + added pages directory">
       <created>1645205223205</created>
@@ -385,7 +391,21 @@
       <option name="project" value="LOCAL" />
       <updated>1649534393284</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="testing AVIF vs WEBP filetypes">
+      <created>1649535391223</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1649535391223</updated>
+    </task>
+    <task id="LOCAL-00045" summary="removed console logging">
+      <created>1649536388424</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1649536388424</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,8 +424,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="moved slider + colour selector into modal, not functional yet" />
-    <MESSAGE value="added slider/opacity functionality in modal" />
     <MESSAGE value="modal triggers on tracking timer, added accessibility button to navbar" />
     <MESSAGE value="testing host change" />
     <MESSAGE value="added logic for enabling simplified text&#10;added simplified text button hooked up to logic" />
@@ -429,6 +447,8 @@
     <MESSAGE value="fixed another &lt;p&gt; nesting bug" />
     <MESSAGE value="replacement of png/jpg files with webp files to improve performance" />
     <MESSAGE value="uninstalled unused packages" />
-    <option name="LAST_COMMIT_MESSAGE" value="uninstalled unused packages" />
+    <MESSAGE value="testing AVIF vs WEBP filetypes" />
+    <MESSAGE value="removed console logging" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed console logging" />
   </component>
 </project>

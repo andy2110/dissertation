@@ -69,7 +69,7 @@
     sessionStorage.removeItem("timeSpent");
   }
 
-  function start(){
+  function start(SavedTime){
     userBehaviour.config({
       userInfo: true,
       clicks: true,
@@ -85,9 +85,9 @@
         sessionStorage.setItem("contextChange", results.contextChange);
         sessionStorage.setItem("mouseMovements", results.mouseMovements);
         sessionStorage.setItem("mouseScroll", results.mouseScroll);
-        sessionStorage.setItem("startTime", results.time.startTime);
-        sessionStorage.setItem("currentTime", results.time.currentTime);
-        sessionStorage.setItem("timeSpent", (results.time.currentTime - results.time.startTime).toString());
+          sessionStorage.setItem("startTime", results.time.startTime);
+          sessionStorage.setItem("currentTime", results.time.currentTime);
+          sessionStorage.setItem("timeSpent", (results.time.currentTime - results.time.startTime).toString());
       },
     })
     userBehaviour.start()
