@@ -207,7 +207,7 @@ export function AccessibilityModal(callback, deps) {
                                                 below. It will break up larger pieces of text, and use simpler language overall.</p>
                                         </div>
                                 }
-                                <Button onClick={enableSimple}>{buttonText} Simplified Text</Button>
+                                <Button onClick={enableSimple} aria={"enable or disable simple text"}>{buttonText} Simplified Text</Button>
                                 <br/><br/>
                             </Col>
                             <Col xs={12} s={8} md={4}>
