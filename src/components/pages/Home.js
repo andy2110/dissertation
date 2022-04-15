@@ -123,7 +123,7 @@ const Home = (callback, deps) => {
                                 <Card.Text>
                                     Apply for a job with Time.
                                 </Card.Text>
-                                <Link to="/vacancies" className="btn btn-primary" aria={"vacancies-nav"}>Find Out More</Link>
+                                <Link to="/vacancy" className="btn btn-primary" aria={"vacancies-nav"}>Find Out More</Link>
                             </Card.Body>
                         </Card>
                     </Col>
