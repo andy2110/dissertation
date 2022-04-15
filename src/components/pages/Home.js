@@ -66,7 +66,7 @@ const Home = (callback, deps) => {
                                 <Card.Text>
                                     Find out more about the services we provide.
                                 </Card.Text>
-                                <Link to="/about" className="btn btn-primary">Find Out More</Link>
+                                <Link to="/about" className="btn btn-primary" aria={"about-us-nav"}>Find Out More</Link>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -85,7 +85,7 @@ const Home = (callback, deps) => {
                                 <Card.Text>
                                     How to get in touch with us.
                                 </Card.Text>
-                                <Link to="/contact" className="btn btn-primary">Find Out More</Link>
+                                <Link to="/contact" className="btn btn-primary" aria={"contact-us-nav"}>Find Out More</Link>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -104,7 +104,7 @@ const Home = (callback, deps) => {
                                 <Card.Text>
                                     Who are we?
                                 </Card.Text>
-                                <Link to="/team" className="btn btn-primary">Find Out More</Link>
+                                <Link to="/team" className="btn btn-primary" aria={"meet-the-team-nav"}>Find Out More</Link>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -123,7 +123,7 @@ const Home = (callback, deps) => {
                                 <Card.Text>
                                     Apply for a job with Time.
                                 </Card.Text>
-                                <Link to="/vacancies" className="btn btn-primary">Find Out More</Link>
+                                <Link to="/vacancies" className="btn btn-primary" aria={"vacancies-nav"}>Find Out More</Link>
                             </Card.Body>
                         </Card>
                     </Col>
