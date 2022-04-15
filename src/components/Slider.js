@@ -32,7 +32,7 @@ const RangeSlider = ({ classes, label, onChange, value, ...sliderProps }) => {
                 type="range"
                 value={sliderVal}
                 {...sliderProps}
-                className={`slider ${classes}`}
+                className={`opacity slider`}
                 id="myRange"
                 onChange={changeCallback}
                 onMouseDown={() => setMouseState("down")} // When mouse down set the mouseState to 'down'
