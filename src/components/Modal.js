@@ -191,7 +191,7 @@ export function AccessibilityModal(callback, deps) {
                                 { renderButtons(colours) }
                             </div>
                             <br/>
-                            <RangeSlider {...sliderProps} />
+                            <RangeSlider class={"opacity slider"}{...sliderProps} />
                             <br/>
                             </Col>
                             <Col xs={12} s={8} md={4}>
