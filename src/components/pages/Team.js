@@ -380,7 +380,7 @@ const Team = () => {
                                                 university!
                                             </p>
                                             <p>
-                                                Sophie graduated and became a Supervisor. She later became Assistant Manager.
+                                                Sophie graduated and became a Supervisor. She later became Field Supervisor, and then Assistant Manager.
                                             </p>
                                             <blockquote className="blockquote mb-0">
                                                     “I was excited when the opportunity arose for me to join the core team at Time.
