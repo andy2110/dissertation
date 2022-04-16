@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="454e0e34-28c2-4b1e-9bde-816a21a538d6" name="Changes" comment="removed console logging">
-      <change afterPath="$PROJECT_DIR$/src/components/checkFocus.js" afterDir="false" />
+    <list default="true" id="454e0e34-28c2-4b1e-9bde-816a21a538d6" name="Changes" comment="provided aria label to button">
+      <change afterPath="$PROJECT_DIR$/cypress.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/fixtures/example.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/integration/sample_spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/plugins/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/support/commands.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/support/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Staff.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,56 +92,10 @@
       <workItem from="1648566977987" duration="41699000" />
       <workItem from="1649075466049" duration="47224000" />
       <workItem from="1649600976915" duration="5239000" />
-      <workItem from="1649773966098" duration="471000" />
-    </task>
-    <task id="LOCAL-00001" summary="testing commit + added pages directory">
-      <created>1645205223205</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1645205223205</updated>
-    </task>
-    <task id="LOCAL-00002" summary="added sticky navbar, changed tab title + icon">
-      <created>1645208741054</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1645208741054</updated>
-    </task>
-    <task id="LOCAL-00003" summary="reformatted about page + added content, created staff page for routing">
-      <created>1645833433526</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1645833433526</updated>
-    </task>
-    <task id="LOCAL-00004" summary="potential fix to footer overlap">
-      <created>1645909211407</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1645909211407</updated>
-    </task>
-    <task id="LOCAL-00005" summary="temporary fix to navbar home highlight issue (wrapped /home in two linkcontainers)">
-      <created>1645911582676</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1645911582676</updated>
-    </task>
-    <task id="LOCAL-00006" summary="deleted redundant css">
-      <created>1645911602576</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1645911602576</updated>
-    </task>
-    <task id="LOCAL-00007" summary="changed blank path to render home component">
-      <created>1645911636457</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1645911636457</updated>
+      <workItem from="1649773966098" duration="4636000" />
+      <workItem from="1649945037459" duration="594000" />
+      <workItem from="1650029516155" duration="14284000" />
+      <workItem from="1650118870313" duration="95000" />
     </task>
     <task id="LOCAL-00008" summary="added padding">
       <created>1645911645588</created>
@@ -405,7 +363,84 @@
       <option name="project" value="LOCAL" />
       <updated>1649536388424</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="changed image from avif to webp as avif is not supported on firefox">
+      <created>1649774618642</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1649774618642</updated>
+    </task>
+    <task id="LOCAL-00047" summary="checks if the tab is being focused on or not">
+      <created>1649774647615</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1649774647615</updated>
+    </task>
+    <task id="LOCAL-00048" summary="changed title of Simplified Text to add &amp; Layout">
+      <created>1649776458512</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1649776458517</updated>
+    </task>
+    <task id="LOCAL-00049" summary="fixed a typo">
+      <created>1649780585208</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1649780585208</updated>
+    </task>
+    <task id="LOCAL-00050" summary="added aria labels to buttons">
+      <created>1650032043642</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1650032043642</updated>
+    </task>
+    <task id="LOCAL-00051" summary="fixed typo in Sophie's text">
+      <created>1650032061932</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1650032061932</updated>
+    </task>
+    <task id="LOCAL-00052" summary="fixed error in navigation">
+      <created>1650033033703</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1650033033703</updated>
+    </task>
+    <task id="LOCAL-00053" summary="added identifier to opacity slider">
+      <created>1650039352831</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1650039352831</updated>
+    </task>
+    <task id="LOCAL-00054" summary="changed brightness label to colour intensity">
+      <created>1650039368742</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1650039368742</updated>
+    </task>
+    <task id="LOCAL-00055" summary="changed class name of slider in the incorrect place, fixed">
+      <created>1650039675871</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1650039675872</updated>
+    </task>
+    <task id="LOCAL-00056" summary="provided aria label to button">
+      <created>1650042842740</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1650042842740</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -424,17 +459,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="modal triggers on tracking timer, added accessibility button to navbar" />
-    <MESSAGE value="testing host change" />
-    <MESSAGE value="added logic for enabling simplified text&#10;added simplified text button hooked up to logic" />
-    <MESSAGE value="edited some UI, added reset button for overlay colour selector" />
-    <MESSAGE value="added content to footer" />
-    <MESSAGE value="changed button texts + added scroll to top functionality on loading new route" />
-    <MESSAGE value="added font selector" />
-    <MESSAGE value="minor changes to modal structure + added simplified text options to all pages" />
-    <MESSAGE value="added text background colour changing + basic font colour changing" />
-    <MESSAGE value="added final colours for overlay, font, and background changes - implemented functionality throughout website" />
-    <MESSAGE value="fixed console error with google font picker" />
     <MESSAGE value="created contact + vacancy page, fixed navbar font colour/background" />
     <MESSAGE value="fixed minor error + changed staff content" />
     <MESSAGE value="tracking added to all pages" />
@@ -449,6 +473,17 @@
     <MESSAGE value="uninstalled unused packages" />
     <MESSAGE value="testing AVIF vs WEBP filetypes" />
     <MESSAGE value="removed console logging" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed console logging" />
+    <MESSAGE value="changed image from avif to webp as avif is not supported on firefox" />
+    <MESSAGE value="checks if the tab is being focused on or not" />
+    <MESSAGE value="changed title of Simplified Text to add &amp; Layout" />
+    <MESSAGE value="fixed a typo" />
+    <MESSAGE value="added aria labels to buttons" />
+    <MESSAGE value="fixed typo in Sophie's text" />
+    <MESSAGE value="fixed error in navigation" />
+    <MESSAGE value="added identifier to opacity slider" />
+    <MESSAGE value="changed brightness label to colour intensity" />
+    <MESSAGE value="changed class name of slider in the incorrect place, fixed" />
+    <MESSAGE value="provided aria label to button" />
+    <option name="LAST_COMMIT_MESSAGE" value="provided aria label to button" />
   </component>
 </project>
