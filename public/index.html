@@ -61,7 +61,6 @@
   function clear(){
     sessionStorage.removeItem("clickCount");
     sessionStorage.removeItem("clickDetails");
-    sessionStorage.removeItem("contextChange");
     sessionStorage.removeItem("mouseMovements");
     sessionStorage.removeItem("mouseScroll");
     sessionStorage.removeItem("startTime");
@@ -82,7 +81,6 @@
       processData: function(results){
         sessionStorage.setItem("clickCount", results.clicks.clickCount);
         sessionStorage.setItem("clickDetails", results.clicks.clickDetails);
-        sessionStorage.setItem("contextChange", results.contextChange);
         sessionStorage.setItem("mouseMovements", results.mouseMovements);
         sessionStorage.setItem("mouseScroll", results.mouseScroll);
           sessionStorage.setItem("startTime", results.time.startTime);
